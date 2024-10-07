@@ -1,0 +1,26 @@
+
+body {
+    background: #1e1e1e;
+    color: white;
+}
+header{
+    display: flex;
+}
+nav{
+    color: aquamarine;
+    display: flex;
+    margin: 40px;
+    list-style: none;
+    align-items: center;
+}
+h1 {
+    color: #ab81ff;
+    font-size: 30pt;
+}
+.projetos{
+    background: #11afdf;
+}
+
+#contato{
+    justify-content: left;
+}
