@@ -13,12 +13,13 @@ header {
     align-items: center;
     padding: 20px 50px;
     background-color: #121212;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
     color: #ab81ff;
-    font-size: 28pt;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 nav ul {
@@ -33,24 +34,27 @@ nav ul li a {
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
 nav ul li a:hover {
     background-color: #ab81ff;
     color: #121212;
+    transform: translateY(-4px);
 }
 
 #home {
     padding: 50px;
     text-align: center;
-    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(11, 29, 228), rgb(0, 0, 0));
+    background-image: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 }
 
 #home h2 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 20px;
     color: #11afdf;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 #home .bio {
@@ -60,31 +64,40 @@ nav ul li a:hover {
 }
 
 #home img {
-    width: auto;
-    height: 300px;
-    border-radius: 50%;
+    width: 250px; /* Diminui o tamanho da imagem */
+    height: 250px;
+    border-radius: 50%; /* Mantém o formato redondo */
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Mantém a sombra */
+    border: 4px solid #ab81ff; /* Borda estilosa */
+    transition: transform 0.3s ease; /* Animação suave */
 }
 
+#home img:hover {
+    transform: scale(1.05); /* Aumenta suavemente ao passar o mouse */
+}
+
+
 #home p {
-    max-width: 800px;
-    font-size: 18px;
-    line-height: 1.6;
+    max-width: 750px;
+    font-size: 20px;
+    line-height: 1.8;
     color: #ddd;
 }
 
 #projetos {
     padding: 50px;
     text-align: center;
-    background-color: #121212;
+    background-color: #1b1b1b;
 }
 
 #projetos h2 {
-    font-size: 26px;
+    font-size: 32px;
     margin-bottom: 20px;
     color: #11afdf;
+    text-transform: uppercase;
 }
+
 .projetos-container {
     display: flex;
     flex-wrap: wrap;
@@ -94,13 +107,13 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #121212;
-    border-radius: 10px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
     padding: 20px;
-    width: 300px;
+    width: 320px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card img {
@@ -113,23 +126,26 @@ nav ul li a:hover {
 .card h3 {
     color: #ab81ff;
     margin-top: 15px;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .card p {
-    color: #ddd;
+    color: #ccc;
     margin: 15px 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .card a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     color: white;
     background-color: #11afdf;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .card a:hover {
@@ -138,6 +154,7 @@ nav ul li a:hover {
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -145,35 +162,40 @@ footer {
     padding: 20px;
     background-color: #121212;
     text-align: center;
+    font-size: 16px;
 }
 
 footer a {
     color: #ab81ff;
     text-decoration: none;
+    font-size: 18px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 .whatsapp-btn {
     background-color: #25D366;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 30px;
     text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 250px;
-    margin: 10px auto;
+    width: 260px;
+    margin: 20px auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .whatsapp-icon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-right: 10px;
 }
 
 .whatsapp-btn:hover {
     background-color: #1ebe56;
+    transform: translateY(-3px);
 }
