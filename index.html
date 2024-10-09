@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Felipe Portifolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Felipe Portfólio</title>
 </head>
+
 <body>
     <header>
         <h1>Felipe Alves</h1>
         <nav>
             <ul>
-                <a href="#home">Home</a>
-                <a href="#projetos">Projetos</a>
-                <a heref="#redes">Contato</a>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#redes">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home">
-            <h2>Sobre mim:</h2>
-            <img src="img/foto_felipealves.jpeg" alt="foto minha">
-            <p>Sou Felipe Alves Rodrigues, aprendiz em desenvolvimento Full Stack especializado em criar soluções completas, do front-end ao back-end. 
-                Com experiência em diversas tecnologias, 
-                desenvolvo aplicações eficientes e funcionais, sempre focado em entregar resultados.
-            </p>
+            <h2>Sobre mim</h2>
+            <div class="bio">
+                <img src="img/foto_felipealves.jpeg" alt="foto minha">
+                <p>Sou Felipe Alves Rodrigues, desenvolvedor Full Stack especializado em criar soluções completas, do
+                    front-end ao back-end. Com experiência em diversas tecnologias, desenvolvo aplicações eficientes e
+                    funcionais, sempre focado em entregar resultados.</p>
+            </div>
         </section>
+
         <section id="projetos">
-            <h2>Projetos:</h2>
-            
+            <h2>Projetos</h2>
+            <div class="projetos-container">
+                <div class="card">
+                    <img src="img/central_estagios.png" alt="Projeto 1">
+                    <h3>Projeto 1</h3>
+                    <p>Breve descrição do projeto 1.</p>
+                    <a href="https://github.com/FelipeAlves4/Central-estagios" target="_blank">Ver Projeto</a>
+                </div>
+                <div class="card">
+                    <img src="img/gamersflix.png" alt="Projeto 2">
+                    <h3>Projeto 2</h3>
+                    <p>Breve descrição do projeto 2.</p>
+                    <a href="https://github.com/FelipeAlves4/GamersFlix" target="_blank">Ver Projeto</a>
+                </div>
+                <!-- Adicione seus projetos aqui -->
         </section>
     </main>
 
     <footer id="redes">
         <p>Desenvolvido por: <a href="https://www.instagram.com/felipe_alvesrodri/" target="_blank">
-            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" 
-            width="67" height="35" alt="instagram logo"  /> </p>
-       <a href="https://wa.me/14996759167" target="_blank" style="background-color: #25D366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-family: Arial, sans-serif; font-size: 16px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 10px;">
+                <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg"
+                    width="30" height="30" alt="Instagram logo" />
+            </a></p>
+        <a href="https://wa.me/14996759167" target="_blank" class="whatsapp-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                class="whatsapp-icon">
             Fale conosco no WhatsApp
         </a>
     </footer>
-    
 </body>
+
 </html>
