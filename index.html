@@ -5,30 +5,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Felipe Portfólio</title>
 </head>
 
 <body>
     <header>
-        <h1>Felipe Alves</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#redes">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Felipe Alves</h1>
+            <button class="menu-toggle" aria-label="Menu">
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="home">
-            <h2>Sobre mim</h2>
             <div class="bio">
-                <img src="img/file.png" alt="foto minha">
+                <img src="img/file.png" alt="Felipe Alves">
+                <div class="bio-content">
+                    <h2>Desenvolvedor Full Stack</h2>
                 <p>Sou Felipe Alves Rodrigues, desenvolvedor Full Stack especializado em criar soluções completas, do
                     front-end ao back-end. Com experiência em diversas tecnologias, desenvolvo aplicações eficientes e
-                    funcionais, sempre focado em entregar resultados.</p>
+                        funcionais, sempre focado em entregar resultados de alta qualidade.</p>
+                    <div class="skills">
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Flask</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="habilidades-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Front-end</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <div class="skill-level advanced">Intermediário</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                            <div class="skill-level advanced">Intermediário</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-level beginner">Iniciante</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                            <div class="skill-level beginner">Iniciante</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Back-end</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="skill-level advanced">Avançado</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                            <div class="skill-level beginner">Iniciante</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                            <div class="skill-level beginner">Iniciante</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Flask</span>
+                            <div class="skill-level intermediate">Intermediário</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Ferramentas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                            <div class="skill-level advanced">Avançado</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                            <div class="skill-level advanced">Avançado</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Terminal</span>
+                            <div class="skill-level intermediate">Intermediário</div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Scrum</span>
+                            <div class="skill-level beginner">Iniciante</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -36,39 +136,68 @@
             <h2>Projetos</h2>
             <div class="projetos-container">
                 <div class="card">
-                    <img src="img/central_estagios.png" alt="Projeto 1">
-                    <h3>Projeto 1</h3>
-                    <p>O Central de Estágios é uma plataforma web que conecta estudantes a vagas de estágio e emprego, permitindo o cadastro de currículos, simulação de entrevistas e dicas de carreira. 
-                        Desenvolvido com HTML5, CSS3, JavaScript no frontend e Flask com SQLAlchemy no backend, o sistema integra perfil de usuário com informações automáticas do currículo, além de permitir a edição de dados adicionais,
-                       como foto e habilidades.
-                    </p>
-                    <a href="https://github.com/FelipeAlves4/Central-estagios" target="_blank">Ver Projeto</a>
+                    <img src="img/central_estagios.png" alt="Central de Estágios">
+                    <div class="card-content">
+                        <h3>Central de Estágios</h3>
+                        <p>Plataforma web que conecta estudantes a vagas de estágio e emprego, com recursos de cadastro de currículos, simulação de entrevistas e dicas de carreira.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Flask</span>
+                            <span>SQLAlchemy</span>
+                        </div>
+                        <a href="https://github.com/FelipeAlves4/Central-estagios" target="_blank">
+                            <i class="fab fa-github"></i> Ver Projeto
+                        </a>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="img/gamersflix.png" alt="Projeto 2">
-                    <h3>Projeto 2</h3>
-                    <p>GamerFlix é uma plataforma que ajuda gamers a montar o PC ideal, escolhendo componentes de acordo com suas necessidades de desempenho e orçamento. 
-                        O site oferece uma interface fácil de usar, permitindo comparar e selecionar hardware compatível para maximizar a 
-                        performance em jogos.
-                    </p>
-                    <a href="https://github.com/FelipeAlves4/GamersFlix" target="_blank">Ver Projeto</a>
+                    <img src="img/gamersflix.png" alt="GamersFlix">
+                    <div class="card-content">
+                        <h3>GamersFlix</h3>
+                        <p>Plataforma que ajuda gamers a montar o PC ideal, com interface intuitiva para comparar e selecionar componentes de hardware compatíveis.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express</span>
+                        </div>
+                        <a href="https://github.com/FelipeAlves4/GamersFlix" target="_blank">
+                            <i class="fab fa-github"></i> Ver Projeto
+                        </a>
+                    </div>
                 </div>
-               
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="contato-container">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/felipe_alvesrodri/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/FelipeAlves4" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <a href="https://wa.me/14996759167" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Fale comigo no WhatsApp
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer id="redes">
-        <p>Desenvolvido por: <a href="https://www.instagram.com/felipe_alvesrodri/" target="_blank">
-                <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg"
-                    width="30" height="30" alt="Instagram logo" />
-            </a>
-        </p>
-        <a href="https://wa.me/14996759167" target="_blank" class="whatsapp-btn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
-                class="whatsapp-icon">
-            Fale conosco no WhatsApp
-        </a>
-    </footer>
+    <button class="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="script.js"></script>
 </body>
 
 </html>
