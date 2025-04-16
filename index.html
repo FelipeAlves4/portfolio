@@ -30,21 +30,19 @@
 
     <main>
         <section id="home">
-            <div class="bio">
-                <img src="img/file.png" alt="Felipe Alves">
-                <div class="bio-content">
-                    <h2>Desenvolvedor Full Stack</h2>
-                <p>Sou Felipe Alves Rodrigues, desenvolvedor Full Stack especializado em criar soluções completas, do
-                    front-end ao back-end. Com experiência em diversas tecnologias, desenvolvo aplicações eficientes e
-                        funcionais, sempre focado em entregar resultados de alta qualidade.</p>
-                    <div class="skills">
-                        <span>JavaScript</span>
-                        <span>Python</span>
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>Flask</span>
-                        <span>SQL</span>
+            <div class="home-container">
+                <div class="home-text">
+                    <h2>Olá, eu sou o</h2>
+                    <h1 class="destaque-nome">Felipe Alves :)</h1>
+                    <h3>Desenvolvedor Full Stack</h3>
+                    <p>Sou Felipe Alves Rodrigues, desenvolvedor especializado em criar soluções completas, do front-end ao back-end. Com experiência em diversas tecnologias, desenvolvo aplicações eficientes e funcionais, sempre focado em entregar resultados de alta qualidade.</p>
+                    <div class="home-buttons">
+                        <a href="cv.pdf" class="btn-download" download>Download CV</a>
+                        <a href="#contato" class="btn-contato">Entrar em contato</a>
                     </div>
+                </div>
+                <div class="home-foto">
+                    <img src="img/eu.jpg" alt="Felipe Alves">
                 </div>
             </div>
         </section>
@@ -135,8 +133,8 @@
         <section id="projetos">
             <h2>Projetos</h2>
             <div class="projetos-container">
-                <div class="card">
-                    <img src="img/central_estagios.png" alt="Central de Estágios">
+                <a class="card projeto-card" href="https://github.com/FelipeAlves4/Central-estagios" target="_blank">
+                    <img src="img/image.png" alt="Central de Estágios">
                     <div class="card-content">
                         <h3>Central de Estágios</h3>
                         <p>Plataforma web que conecta estudantes a vagas de estágio e emprego, com recursos de cadastro de currículos, simulação de entrevistas e dicas de carreira.</p>
@@ -147,27 +145,48 @@
                             <span>Flask</span>
                             <span>SQLAlchemy</span>
                         </div>
-                        <a href="https://github.com/FelipeAlves4/Central-estagios" target="_blank">
-                            <i class="fab fa-github"></i> Ver Projeto
-                        </a>
+                        <span class="btn-vermais">Ver mais</span>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a class="card projeto-card" href="https://github.com/FelipeAlves4/GamersFlix" target="_blank">
                     <img src="img/gamersflix.png" alt="GamersFlix">
                     <div class="card-content">
                         <h3>GamersFlix</h3>
                         <p>Plataforma que ajuda gamers a montar o PC ideal, com interface intuitiva para comparar e selecionar componentes de hardware compatíveis.</p>
                         <div class="tech-stack">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>Express</span>
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
                         </div>
-                        <a href="https://github.com/FelipeAlves4/GamersFlix" target="_blank">
-                            <i class="fab fa-github"></i> Ver Projeto
-                        </a>
+                        <span class="btn-vermais">Ver mais</span>
                     </div>
-                </div>
+                </a>
+                <a class="card projeto-card" href="https://github.com/FelipeAlves4/casa-de-ora-o" target="_blank">
+                    <img src="img/igreja.png" alt="Casa de oração">
+                    <div class="card-content">
+                        <h3>Casa de oração</h3>
+                        <p>A Casa de Oração é uma igreja local que busca conectar pessoas e compartilhar a mensagem de fé, amor e esperança. O site foi criado para melhorar a presença online da igreja, permitindo que mais pessoas conheçam seu trabalho e se sintam convidadas a participar de suas atividades.</p>
+                        <div class="tech-stack">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                        </div>
+                        <span class="btn-vermais">Ver mais</span>
+                    </div>
+                </a>
+                <a class="card projeto-card" href="https://github.com/FelipeAlves4/Projeto-Ocean" target="_blank">
+                    <img src="img/ocean.png" alt="Ocean">
+                    <div class="card-content">
+                        <h3>Ocean</h3>
+                        <p>Ocean é um sistema de gestão de controle pessoal e profissional, foi criado com o objetivo de auxiliar pessoas e empresas na organização de tarefas, metas e finanças. </p>
+                        <div class="tech-stack">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                        </div>
+                        <span class="btn-vermais">Ver mais</span>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -181,7 +200,7 @@
                     <a href="https://github.com/FelipeAlves4" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank">
+                    <a href="https://www.linkedin.com/in/felipealves-py" target="_blank">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
