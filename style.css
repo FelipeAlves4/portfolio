@@ -147,6 +147,7 @@ header {
     font-size: 4.5rem;
     font-weight: 800;
     background: linear-gradient(45deg, var(--highlight-color), var(--accent-color));
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0.5rem 0;
     position: relative;
