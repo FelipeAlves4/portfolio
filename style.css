@@ -351,7 +351,7 @@ header.scrolled, .header-container.scrolled {
 .home-foto img {
     width: 100%;
     height: auto;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border-radius: 30% 70% 70% 30% / 40% 40% 70% 70%;
     object-fit: cover;
     filter: contrast(1.1) saturate(1.2);
     animation: float 6s ease-in-out infinite;
