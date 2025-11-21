@@ -1,105 +1,158 @@
-// Menu Toggle
+// Element references
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
 const body = document.body;
+const header = document.querySelector('header');
+const headerContainer = document.querySelector('.header-container');
+const backToTop = document.querySelector('.back-to-top');
+const navLinks = document.querySelectorAll('.main-nav a');
+const sections = document.querySelectorAll('main section[id]');
 
-function toggleMenu() {
+// Menu Toggle
+const toggleMenu = () => {
+    if (!menuToggle || !mainNav) return;
     menuToggle.classList.toggle('active');
-    mainNav.classList.toggle('active');
-    body.classList.toggle('menu-open');
+    const isOpen = mainNav.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    body.classList.toggle('menu-open', isOpen);
+};
+
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+        if (mainNav.classList.contains('active') &&
+            !mainNav.contains(e.target) &&
+            !menuToggle.contains(e.target)) {
+            toggleMenu();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
 }
 
-// Event Listeners
-menuToggle.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggleMenu();
-});
+// Smooth scroll + close menu
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
 
-// Fechar menu ao clicar fora
-document.addEventListener('click', (e) => {
-    if (mainNav.classList.contains('active') && 
-        !mainNav.contains(e.target) && 
-        !menuToggle.contains(e.target)) {
-        toggleMenu();
-    }
-});
+        if (targetId && targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(targetId);
 
-// Fechar menu ao clicar em um link
-document.querySelectorAll('.main-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (mainNav.classList.contains('active')) {
+            if (targetSection) {
+                const offset = targetSection.offsetTop - 70;
+                window.scrollTo({
+                    top: offset < 0 ? 0 : offset,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        if (mainNav?.classList.contains('active')) {
             toggleMenu();
         }
     });
 });
 
-// Fechar menu ao redimensionar a janela
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
-        toggleMenu();
-    }
-});
-
-// Animação de scroll
+// Intersection animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
     });
-}, {
-    threshold: 0.1
-});
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.card, .bio-content').forEach((el) => observer.observe(el));
+document.querySelectorAll('.card, .bio-content, .progress-item').forEach((el) => observer.observe(el));
 
-// Smooth scroll para links do menu
-document.querySelectorAll('.main-nav a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 80,
-                behavior: 'smooth'
-            });
+// Scroll helpers
+const updateActiveLink = () => {
+    const scrollPosition = window.scrollY + 160;
+    let currentId = '#home';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentId = `#${section.id}`;
         }
     });
+
+    navLinks.forEach(link => {
+        const isActive = link.getAttribute('href') === currentId;
+        link.classList.toggle('active', isActive);
+        if (isActive) {
+            link.setAttribute('aria-current', 'page');
+        } else {
+            link.removeAttribute('aria-current');
+        }
+    });
+};
+
+const handleScrollEffects = () => {
+    const hasScrolled = window.scrollY > 30;
+    header?.classList.toggle('scrolled', hasScrolled);
+    headerContainer?.classList.toggle('scrolled', hasScrolled);
+
+    if (backToTop) {
+        backToTop.classList.toggle('visible', window.scrollY > 500);
+    }
+
+    updateActiveLink();
+};
+
+window.addEventListener('scroll', handleScrollEffects);
+window.addEventListener('load', () => {
+    updateActiveLink();
+    handleScrollEffects();
 });
 
-// Efeito de digitação no título
-const title = document.querySelector('.bio-content h2');
-const text = title.textContent;
-title.textContent = '';
-
-let i = 0;
-function typeWriter() {
-    if (i < text.length) {
-        title.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100);
-    }
+if (backToTop) {
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }
 
-setTimeout(typeWriter, 1000);
+// Efeito de digitação no título
+const title = document.querySelector('.bio-title');
+if (title) {
+    const text = title.textContent.trim();
+    title.textContent = '';
+    let i = 0;
+
+    const typeWriter = () => {
+        if (i < text.length) {
+            title.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 60);
+        }
+    };
+
+    setTimeout(typeWriter, 600);
+}
 
 // Animação das barras de progresso
 const skillBars = document.querySelectorAll('.skill-progress');
-const observerSkills = new IntersectionObserver((entries) => {
+const observerSkills = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const width = entry.target.style.width;
-            entry.target.style.width = '0';
-            setTimeout(() => {
-                entry.target.style.width = width;
-            }, 100);
+            const progress = entry.target.dataset.progress || 0;
+            entry.target.style.width = `${progress}%`;
+            obs.unobserve(entry.target);
         }
     });
-}, {
-    threshold: 0.5
-});
+}, { threshold: 0.6 });
 
-skillBars.forEach(bar => observerSkills.observe(bar)); 
+skillBars.forEach(bar => {
+    bar.style.width = '0';
+    observerSkills.observe(bar);
+});
