@@ -9,47 +9,63 @@ const navLinks = document.querySelectorAll('.main-nav a');
 const sections = document.querySelectorAll('main section[id]');
 
 // Menu Toggle
+const closeMenu = () => {
+    if (!menuToggle || !mainNav) return;
+
+    menuToggle.classList.remove('active');
+    mainNav.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    body.classList.remove('menu-open');
+};
+
 const toggleMenu = () => {
     if (!menuToggle || !mainNav) return;
-    menuToggle.classList.toggle('active');
+
     const isOpen = mainNav.classList.toggle('active');
-    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.classList.toggle('active', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
     body.classList.toggle('menu-open', isOpen);
 };
 
 if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+    menuToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
         toggleMenu();
     });
 
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', (event) => {
         if (mainNav.classList.contains('active') &&
-            !mainNav.contains(e.target) &&
-            !menuToggle.contains(e.target)) {
-            toggleMenu();
+            !mainNav.contains(event.target) &&
+            !menuToggle.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && mainNav.classList.contains('active')) {
+            closeMenu();
         }
     });
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
-            toggleMenu();
+        if (window.innerWidth > 900 && mainNav.classList.contains('active')) {
+            closeMenu();
         }
     });
 }
 
 // Smooth scroll + close menu
 navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', (event) => {
         const targetId = link.getAttribute('href');
 
         if (targetId && targetId.startsWith('#')) {
-            e.preventDefault();
+            event.preventDefault();
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
-                const offset = targetSection.offsetTop - 70;
+                const offset = targetSection.offsetTop - 88;
                 window.scrollTo({
                     top: offset < 0 ? 0 : offset,
                     behavior: 'smooth'
@@ -57,9 +73,7 @@ navLinks.forEach(link => {
             }
         }
 
-        if (mainNav?.classList.contains('active')) {
-            toggleMenu();
-        }
+        closeMenu();
     });
 });
 
@@ -70,13 +84,15 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
-document.querySelectorAll('.card, .bio-content, .progress-item').forEach((el) => observer.observe(el));
+document
+    .querySelectorAll('.card, .bio-content, .service-card, .process-step, .skill-category, .contato-container, .home-panel')
+    .forEach((element) => observer.observe(element));
 
 // Scroll helpers
 const updateActiveLink = () => {
-    const scrollPosition = window.scrollY + 160;
+    const scrollPosition = window.scrollY + 180;
     let currentId = '#home';
 
     sections.forEach(section => {
@@ -121,38 +137,3 @@ if (backToTop) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
-
-// Efeito de digitação no título
-const title = document.querySelector('.bio-title');
-if (title) {
-    const text = title.textContent.trim();
-    title.textContent = '';
-    let i = 0;
-
-    const typeWriter = () => {
-        if (i < text.length) {
-            title.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 60);
-        }
-    };
-
-    setTimeout(typeWriter, 600);
-}
-
-// Animação das barras de progresso
-const skillBars = document.querySelectorAll('.skill-progress');
-const observerSkills = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progress = entry.target.dataset.progress || 0;
-            entry.target.style.width = `${progress}%`;
-            obs.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.6 });
-
-skillBars.forEach(bar => {
-    bar.style.width = '0';
-    observerSkills.observe(bar);
-});

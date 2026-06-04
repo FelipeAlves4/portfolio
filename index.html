@@ -7,38 +7,42 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Felipe Alves - Desenvolvedor Web Fullstack em Marília. Criação de sites profissionais, sistemas personalizados e aplicações web. Experiência em HTML, CSS, JavaScript, React, Python e Flask. Portfólio com 7+ projetos.">
+        content="Desenvolvimento de sites, landing pages, sistemas personalizados e automações para empresas em Marília e região. Soluções digitais para pequenos negócios captarem clientes e organizarem processos.">
     <meta name="keywords"
-        content="desenvolvedor web Marília, criação de sites, desenvolvedor fullstack, web designer, desenvolvimento web, desenvolvedor HTML CSS JavaScript, desenvolvedor Python, sistema web, aplicação web, freelancer desenvolvedor">
+        content="desenvolvedor web em Marília, criação de sites em Marília, desenvolvimento de sistemas para empresas, landing pages para captação de clientes, sistemas personalizados para pequenos negócios, automações para empresas, sites para empresas locais">
     <meta name="author" content="Felipe Alves">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#1A1B26">
 
     <!-- Open Graph - Redes Sociais -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Felipe Alves - Desenvolvedor Web Fullstack em Marília">
+    <meta property="og:title" content="Felipe Alves | Desenvolvimento de Sites e Sistemas em Marília">
     <meta property="og:description"
-        content="Desenvolvedor web profissional especializado em criar sites modernos, sistemas personalizados e aplicações web. Confira meu portfólio com 7+ projetos realizados.">
+        content="Sites, landing pages, sistemas web e automações para empresas que querem captar clientes, organizar processos e fortalecer sua presença digital.">
     <meta property="og:url" content="https://felipealves-portfolio-desenvolvedor.vercel.app/">
     <meta property="og:image" content="https://felipealves-portfolio-desenvolvedor.vercel.app/img/Felipinho.jpg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Felipe Alves - Desenvolvedor Web em Marília">
+    <meta name="twitter:title" content="Felipe Alves | Sites, Sistemas e Automações para Empresas">
     <meta name="twitter:description"
-        content="Desenvolvedor web fullstack com portfólio de 7+ projetos. HTML, CSS, JavaScript, React, Python, Flask.">
+        content="Desenvolvedor web em Marília. Criação de sites, landing pages, sistemas personalizados e automações para empresas.">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
-      "@type": "Person",
-      "name": "Felipe Alves",
-      "jobTitle": "Desenvolvedor Web Fullstack",
+      "@type": "ProfessionalService",
+      "name": "Felipe Alves - Desenvolvimento Web",
+      "founder": {
+        "@type": "Person",
+        "name": "Felipe Alves",
+        "jobTitle": "Desenvolvedor Web Full Stack"
+      },
       "url": "https://felipealves-portfolio-desenvolvedor.vercel.app/",
       "image": "https://felipealves-portfolio-desenvolvedor.vercel.app/img/Felipinho.jpg",
       "email": "mailto:feliperodrigues@email.com",
-      "telephone": "+55 14 996954298",
+      "telephone": "+55 14 99695-4298",
       "sameAs": [
         "https://www.instagram.com/dev.felipinho/",
         "https://github.com/FelipeAlves4",
@@ -51,9 +55,14 @@
         "addressCountry": "BR"
       },
       "areaServed": ["Marília", "São Paulo", "Brasil"],
-      "knowsLanguage": "pt-BR",
-      "description": "Desenvolvedor web fullstack apaixonado por transformar ideias em soluções digitais funcionais, modernas e de alta performance.",
-      "skills": ["HTML5", "CSS3", "JavaScript", "React", "Python", "Node.js", "Flask", "SQL", "Git", "GitHub"]
+      "description": "Desenvolvimento de sites, landing pages, sistemas web personalizados e automações para empresas e pequenos negócios.",
+      "serviceType": [
+        "Criação de sites institucionais",
+        "Landing pages para captação de clientes",
+        "Sistemas web personalizados",
+        "Automações para empresas",
+        "Dashboards e painéis administrativos"
+      ]
     }
     </script>
 
@@ -61,27 +70,27 @@
     <link rel="canonical" href="https://felipealves-portfolio-desenvolvedor.vercel.app/">
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Felipe Alves - Desenvolvedor Web Fullstack em Marília | HTML, CSS, JavaScript, Python</title>
+    <title>Felipe Alves | Desenvolvimento de Sites e Sistemas em Marília</title>
     <meta name="google-site-verification" content="SzO4VisB3VAJx4hGfrtdKu9rXM1upW3yH5BcLZYWIkc" />
-
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <h1 class="sr-only">Felipe Alves - Desenvolvedor Web</h1>
-            <div class="logo">Portfólio</div>
-            <button class="menu-toggle" aria-label="Menu">
+            <h1 class="sr-only">Felipe Alves | Sites, Sistemas e Automações para Empresas</h1>
+            <div class="logo">Felipe Alves</div>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
                 <span class="menu-icon"><span></span></span>
             </button>
             <nav class="main-nav" aria-label="Navegação principal">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#processo">Como funciona</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -92,21 +101,350 @@
         <section id="home">
             <div class="home-container">
                 <div class="home-text">
-                    <h2>Olá, eu sou o</h2>
-                    <h1 class="destaque-nome">Felipe Alves Rodrigues</h1>
-                    <h3>Desenvolvedor Web Fullstack em Marília</h3>
-                    <p>Desenvolvedor fullstack apaixonado por transformar ideias em soluções digitais funcionais,
-                        modernas e de alta performance. Especializado em criação de sites profissionais, sistemas
-                        personalizados e aplicações web para empresas locais em Marília e região. Busco sempre aplicar
-                        boas práticas e entregar projetos com excelência e agilidade.</p>
+                    <span class="home-eyebrow">Desenvolvedor web em Marília/SP</span>
+                    <h1 class="destaque-nome">Sites, sistemas e automações para empresas</h1>
+                    <h2>Felipe Alves | Soluções digitais para pequenos negócios e profissionais</h2>
+                    <p>Crio sites, landing pages, sistemas web e automações para empresas que precisam captar mais
+                        clientes, organizar processos e fortalecer sua presença digital com clareza e profissionalismo.
+                    </p>
+
                     <div class="home-buttons">
-                        <a href="Curriculo_Felipe.pdf" class="btn-download" download>Download Currículo</a>
-                        <a href="#contato" class="btn-contato">Entrar em contato</a>
+                        <a href="https://wa.me/5514996954298?text=Ol%C3%A1%2C%20Felipe!%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20um%20projeto%20digital."
+                            class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                            Solicitar orçamento
+                        </a>
+                        <a href="#projetos" class="btn-projetos">
+                            <i class="fas fa-briefcase"></i>
+                            Ver projetos
+                        </a>
+                    </div>
+
+                    <div class="home-value-list" aria-label="Principais soluções">
+                        <span><i class="fas fa-check"></i> Sites responsivos</span>
+                        <span><i class="fas fa-check"></i> Landing pages comerciais</span>
+                        <span><i class="fas fa-check"></i> Sistemas sob medida</span>
+                        <span><i class="fas fa-check"></i> Automações simples</span>
+                    </div>
+
+                    <div class="profile-links" aria-label="Links profissionais">
+                        <a href="Curriculo_Felipe.pdf" download>
+                            <i class="fas fa-file-arrow-down"></i>
+                            Currículo
+                        </a>
+                        <a href="https://github.com/FelipeAlves4" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/felipealves-py" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
                     </div>
                 </div>
+
                 <div class="home-foto">
-                    <img src="img/Felipinho.jpg" alt="Felipe Alves Rodrigues - Desenvolvedor Web em Marília">
+                    <img src="img/Felipinho.jpg" alt="Felipe Alves Rodrigues - desenvolvedor web em Marília">
+                    <div class="home-panel" aria-label="Resumo dos resultados entregues">
+                        <span>Foco do projeto</span>
+                        <strong>Transformar presença digital em canal de contato, venda e organização.</strong>
+                        <ul>
+                            <li><i class="fas fa-arrow-right"></i> Comunicação clara da oferta</li>
+                            <li><i class="fas fa-arrow-right"></i> Experiência responsiva</li>
+                            <li><i class="fas fa-arrow-right"></i> Caminho direto para atendimento</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="servicos" aria-labelledby="servicos-title">
+            <div class="section-heading">
+                <span class="section-kicker">Soluções digitais</span>
+                <h2 id="servicos-title">Serviços para empresas que precisam vender, atender e se organizar melhor</h2>
+                <p>Escolho a tecnologia de acordo com o problema do negócio, priorizando páginas rápidas, interfaces
+                    simples e soluções que o cliente consiga usar no dia a dia.</p>
+            </div>
+
+            <div class="servicos-container">
+                <article class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Sites institucionais</h3>
+                    <p>Desenvolvimento de sites profissionais, responsivos e estratégicos para empresas que precisam
+                        transmitir autoridade e gerar contatos.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Landing pages</h3>
+                    <p>Páginas focadas em captação de leads, campanhas e ofertas específicas, com CTA claro e estrutura
+                        voltada para conversão.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fas fa-window-restore"></i>
+                    <h3>Sistemas web personalizados</h3>
+                    <p>Soluções sob medida para organizar informações, processos internos, cadastros, atendimentos e
+                        rotinas operacionais.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Automações para empresas</h3>
+                    <p>Integrações com WhatsApp, formulários e planilhas para reduzir tarefas manuais e acelerar o
+                        retorno para clientes.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fas fa-screwdriver-wrench"></i>
+                    <h3>Manutenção e melhorias</h3>
+                    <p>Ajustes de layout, responsividade, performance, textos e chamadas de ação em sites que já estão
+                        no ar, mas precisam evoluir.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Dashboards e painéis</h3>
+                    <p>Painéis administrativos para visualizar dados, acompanhar atividades e centralizar informações
+                        importantes do negócio.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projetos" aria-labelledby="projetos-title">
+            <div class="section-heading">
+                <span class="section-kicker">Portfólio</span>
+                <h2 id="projetos-title">Projetos transformados em mini estudos de caso</h2>
+                <p>Exemplos de interfaces criadas para apresentar negócios, organizar informação e facilitar o contato
+                    entre empresas, clientes e usuários.</p>
+            </div>
+
+            <div class="projetos-container">
+                <article class="card projeto-card">
+                    <img src="img/Nutricionista.png"
+                        alt="Site institucional para nutricionista com foco em credibilidade e agendamento">
+                    <div class="card-content">
+                        <h3>Site Institucional para Nutricionista</h3>
+                        <div class="case-list">
+                            <p><strong>Problema:</strong> A profissional precisava apresentar seus serviços com mais
+                                clareza e facilitar o contato de novos pacientes.</p>
+                            <p><strong>Solução:</strong> Criei um site responsivo com seções de apresentação, serviços,
+                                método de atendimento, depoimentos e chamada direta para WhatsApp.</p>
+                            <p><strong>Resultado:</strong> A presença digital ficou mais profissional, com informações
+                                organizadas e um caminho simples para agendamento.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://felipealves4.github.io/Nutricionista/" class="btn-site" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Ver site ao vivo
+                            </a>
+                            <a href="https://github.com/FelipeAlves4/Nutricionista.git" class="btn-github"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card projeto-card">
+                    <img src="img/construtor.png"
+                        alt="Site profissional para construtor civil em Marília">
+                    <div class="card-content">
+                        <h3>Rogério Construtor</h3>
+                        <div class="case-list">
+                            <p><strong>Problema:</strong> O prestador de serviços precisava de uma apresentação online
+                                confiável para mostrar sua atuação na construção civil.</p>
+                            <p><strong>Solução:</strong> Desenvolvi um site responsivo com serviços organizados, visual
+                                profissional e botão direto para atendimento.</p>
+                            <p><strong>Resultado:</strong> O negócio ganhou uma vitrine digital mais clara, adequada
+                                para consultas no celular e para encaminhar orçamentos.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://constru-o.vercel.app/" class="btn-site" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Ver site ao vivo
+                            </a>
+                            <a href="https://github.com/FelipeAlves4/Constru-o" class="btn-github" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card projeto-card">
+                    <img src="img/ocean.png"
+                        alt="Ocean sistema de gestão de tarefas, metas e finanças">
+                    <div class="card-content">
+                        <h3>Ocean - Sistema de Gestão</h3>
+                        <div class="case-list">
+                            <p><strong>Problema:</strong> Usuários precisavam centralizar tarefas, metas e finanças em
+                                uma interface simples para acompanhar sua rotina.</p>
+                            <p><strong>Solução:</strong> Construí um sistema web com foco em organização, navegação
+                                intuitiva e separação clara das principais áreas de controle.</p>
+                            <p><strong>Resultado:</strong> A solução oferece uma experiência mais prática para registrar,
+                                visualizar e acompanhar informações pessoais ou profissionais.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://ocean-projeto.vercel.app/" class="btn-site" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Ver site ao vivo
+                            </a>
+                            <a href="https://github.com/FelipeAlves4/Projeto-Ocean" class="btn-github" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card projeto-card">
+                    <img src="img/techlearn.png"
+                        alt="TechLearn plataforma de ensino de programação">
+                    <div class="card-content">
+                        <h3>TechLearn - Plataforma de Ensino</h3>
+                        <div class="case-list">
+                            <p><strong>Problema:</strong> Iniciantes em programação precisavam de uma experiência de
+                                aprendizado mais guiada, visual e fácil de acompanhar.</p>
+                            <p><strong>Solução:</strong> Desenvolvemos uma plataforma com conteúdo organizado,
+                                navegação simples e proposta gamificada para apoiar o estudo.</p>
+                            <p><strong>Resultado:</strong> O projeto apresenta uma jornada de aprendizado mais clara,
+                                com interface amigável para estudantes no início da formação.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://tech-learn-unimar.vercel.app/" class="btn-site" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Ver site ao vivo
+                            </a>
+                            <a href="https://github.com/magat0n/Tech-Learn-UNIMAR.git" class="btn-github"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card projeto-card">
+                    <img src="img/cyber.png"
+                        alt="Site interativo sobre cybersegurança com terminal em JavaScript">
+                    <div class="card-content">
+                        <h3>Cybersegurança - Unimar</h3>
+                        <div class="case-list">
+                            <p><strong>Problema:</strong> O conteúdo sobre cybersegurança precisava ser apresentado de
+                                forma mais envolvente e alinhada ao tema tecnológico.</p>
+                            <p><strong>Solução:</strong> Desenvolvi uma página interativa com terminal em JavaScript,
+                                blocos de conteúdo e experiência visual compatível com o assunto.</p>
+                            <p><strong>Resultado:</strong> A apresentação ficou mais dinâmica, com navegação imersiva e
+                                melhor organização das informações educacionais.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://felipealves4.github.io/Cyberseguranca-unimar/" class="btn-site"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Ver site ao vivo
+                            </a>
+                            <a href="https://github.com/FelipeAlves4/Cyberseguranca-unimar.git" class="btn-github"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card projeto-card">
+                    <img src="img/igreja.png"
+                        alt="Site de apresentação para Casa de Oração em Marília">
+                    <div class="card-content">
+                        <h3>Casa de Oração</h3>
+                        <div class="case-list">
+                            <p><strong>Problema:</strong> A comunidade precisava de uma presença online para apresentar
+                                sua mensagem, programação e formas de contato.</p>
+                            <p><strong>Solução:</strong> Criei um site responsivo com conteúdo institucional, visual
+                                acolhedor e informações organizadas para visitantes.</p>
+                            <p><strong>Resultado:</strong> A igreja passou a contar com um canal digital mais claro para
+                                ser encontrada e apresentar seu trabalho local.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://casa-de-ora-o.vercel.app/" class="btn-site" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> Ver site ao vivo
+                            </a>
+                            <a href="https://github.com/FelipeAlves4/casa-de-ora-o" class="btn-github" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Ver código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="processo" aria-labelledby="processo-title">
+            <div class="section-heading">
+                <span class="section-kicker">Como funciona</span>
+                <h2 id="processo-title">Um processo simples para sair da ideia para uma solução publicada</h2>
+                <p>Da primeira conversa à entrega, o objetivo é manter clareza sobre escopo, prioridade e resultado
+                    esperado para o cliente.</p>
+            </div>
+
+            <div class="processo-container">
+                <article class="process-step">
+                    <span>01</span>
+                    <i class="fas fa-comments"></i>
+                    <h3>Diagnóstico</h3>
+                    <p>Entendo a necessidade do cliente, o público, o momento do negócio e o objetivo do projeto.</p>
+                </article>
+
+                <article class="process-step">
+                    <span>02</span>
+                    <i class="fas fa-sitemap"></i>
+                    <h3>Planejamento</h3>
+                    <p>Defino a melhor solução, a estrutura das páginas, funcionalidades e prioridades de entrega.</p>
+                </article>
+
+                <article class="process-step">
+                    <span>03</span>
+                    <i class="fas fa-code"></i>
+                    <h3>Desenvolvimento</h3>
+                    <p>Crio o site, sistema ou automação com foco em usabilidade, responsividade e desempenho.</p>
+                </article>
+
+                <article class="process-step">
+                    <span>04</span>
+                    <i class="fas fa-handshake-angle"></i>
+                    <h3>Entrega e suporte</h3>
+                    <p>Faço os ajustes finais, publico a solução e oriento o cliente sobre o uso e próximos passos.</p>
+                </article>
             </div>
         </section>
 
@@ -114,69 +452,38 @@
             <div class="sobre-container">
                 <article class="bio-content">
                     <span class="bio-badge">Disponível para projetos e consultorias</span>
-                    <h2 id="sobre-title" class="bio-title">Construo experiências digitais estratégicas e de alta
-                        performance</h2>
-                    <p>Ajudo empresas e profissionais a saírem do básico, unindo design, performance e código limpo.
-                        Minha missão é entregar produtos digitais que comuniquem valor com clareza, performem bem em
-                        qualquer dispositivo e possam evoluir junto com o negócio.</p>
+                    <h2 id="sobre-title" class="bio-title">Desenvolvimento web com foco em problemas reais de negócio</h2>
+                    <p>Sou Felipe Alves, desenvolvedor full stack júnior em Marília/SP. Trabalho na criação de soluções
+                        digitais simples, funcionais e responsivas para ajudar empresas, prestadores de serviço e
+                        profissionais liberais a melhorar sua presença online e organizar processos.</p>
                     <ul class="bio-list">
-                        <li><strong>Especialidades:</strong> Landing pages com foco em conversão, painéis
-                            administrativos, integrações com APIs e automações.</li>
-                        <li><strong>Stack atual:</strong> HTML5, CSS3, JavaScript (ES6+), React, Python/Flask, SQL e
-                            ferramentas no-code para acelerar MVPs.</li>
-                        <li><strong>Onde atuo:</strong> Marília/SP e projetos remotos em todo o Brasil.</li>
+                        <li><strong>Atuação:</strong> sites institucionais, landing pages, sistemas web, painéis e
+                            automações para pequenos negócios.</li>
+                        <li><strong>Forma de trabalho:</strong> comunicação objetiva, escopo claro, layout responsivo e
+                            preocupação com usabilidade desde o início.</li>
+                        <li><strong>Local:</strong> atendimento em Marília/SP e projetos remotos em todo o Brasil.</li>
                     </ul>
                     <div class="bio-counters">
                         <div class="counter">
-                            <strong>+4</strong>
-                            <span>Anos de estudo dedicado</span>
+                            <strong>Web</strong>
+                            <span>Sites e landing pages comerciais</span>
                         </div>
                         <div class="counter">
-                            <strong>+15</strong>
-                            <span>Projetos lançados</span>
+                            <strong>Sistemas</strong>
+                            <span>Interfaces para organizar rotinas</span>
                         </div>
                         <div class="counter">
-                            <strong>100%</strong>
-                            <span>Foco em responsividade</span>
-                        </div>
-                    </div>
-
-                    <div class="progress-grid">
-                        <div class="progress-item">
-                            <div class="progress-header">
-                                <span>Front-end</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <span class="skill-progress" data-progress="90"></span>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-header">
-                                <span>Back-end</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <span class="skill-progress" data-progress="80"></span>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-header">
-                                <span>UX Strategy</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <span class="skill-progress" data-progress="75"></span>
-                            </div>
+                            <strong>Automação</strong>
+                            <span>Fluxos com formulários e atendimento</span>
                         </div>
                     </div>
                 </article>
 
-                <aside class="bio-image" aria-hidden="true">
+                <aside class="bio-image">
                     <div class="bio-card">
-                        <img src="img/felps.png" alt="Felipe Alves - fundo branco">
+                        <img src="img/felps.png" alt="Felipe Alves - desenvolvedor full stack júnior">
                         <div class="bio-card-content">
-                            <p>“Cada linha de código precisa resolver um problema real. O restante é efeito visual.”</p>
+                            <p>“Código bom é o que deixa a solução mais clara, útil e fácil de evoluir.”</p>
                             <span>Felipe Alves</span>
                         </div>
                     </div>
@@ -184,8 +491,14 @@
             </div>
         </section>
 
-        <section id="habilidades">
-            <h2>Habilidades e Tecnologias</h2>
+        <section id="habilidades" aria-labelledby="habilidades-title">
+            <div class="section-heading">
+                <span class="section-kicker">Stack técnica</span>
+                <h2 id="habilidades-title">Tecnologias que uso para construir soluções digitais</h2>
+                <p>As ferramentas mudam conforme o projeto, mas a prioridade é sempre entregar uma experiência rápida,
+                    responsiva e fácil de manter.</p>
+            </div>
+
             <div class="habilidades-container">
                 <div class="skill-category">
                     <h3><i class="fas fa-code"></i> Front-end</h3>
@@ -213,20 +526,24 @@
                     <h3><i class="fas fa-server"></i> Back-end</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
                             <i class="fab fa-node-js"></i>
                             <span>Node.js</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-flask"></i>
                             <span>Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-plug"></i>
+                            <span>APIs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
                         </div>
                     </div>
                 </div>
@@ -243,6 +560,10 @@
                             <span>GitHub</span>
                         </div>
                         <div class="skill-item">
+                            <i class="fas fa-cloud-arrow-up"></i>
+                            <span>Vercel</span>
+                        </div>
+                        <div class="skill-item">
                             <i class="fas fa-terminal"></i>
                             <span>Terminal</span>
                         </div>
@@ -255,211 +576,50 @@
             </div>
         </section>
 
-        <section id="projetos">
-            <h2>Projetos e Portfólio</h2>
-            <div class="projetos-container">
-                <!-- Projeto 1: Site Institucional para Nutricionista -->
-                <div class="card projeto-card">
-                    <img src="img/Nutricionista.png"
-                        alt="Site Institucional para Nutricionista - Site moderno com HTML5, CSS3, JavaScript">
-                    <div class="card-content">
-                        <h3>Site Institucional para Nutricionista</h3>
-                        <p>Desenvolvi um site institucional responsivo para uma nutricionista clínica, com foco em
-                            apresentação profissional, credibilidade e captação de agendamentos pelo WhatsApp.
-
-                            O projeto foi construído com HTML, CSS e JavaScript, incluindo seções de apresentação,
-                            serviços, método de atendimento, depoimentos e chamada para ação.
-
-                            A estrutura foi pensada para profissionais da saúde que desejam fortalecer sua presença
-                            digital, transmitir confiança e facilitar o contato com novos pacientes.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://felipealves4.github.io/Nutricionista/" class="btn-site" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fas fa-globe"></i> Ver site ao vivo
-                            </a>
-                            <a href="https://github.com/FelipeAlves4/Nutricionista.git" class="btn-github"
-                                target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> Ver código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 2: Rogério Construtor -->
-                <div class="card projeto-card">
-                    <img src="img/construtor.png"
-                        alt="Site profissional Rogério Alves Construtor - Desenvolvimento web em Marília com HTML5, CSS3 e JavaScript">
-                    <div class="card-content">
-                        <h3>Rogério Construtor</h3>
-                        <p>Site moderno e responsivo desenvolvido para apresentar os serviços de construção civil do
-                            Rogério Alves em Marília. Design profissional, otimizado para SEO e com foco na conversão de
-                            visitantes em clientes. Totalmente adaptado para mobile e desktop.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://constru-o.vercel.app/" class="btn-site" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fas fa-globe"></i> Ver site ao vivo
-                            </a>
-                            <a href="https://github.com/FelipeAlves4/Constru-o" class="btn-github" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> Ver código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 3: Ocean -->
-                <div class="card projeto-card">
-                    <img src="img/ocean.png"
-                        alt="Ocean - Sistema de gestão de tarefas e finanças - Desenvolvido com HTML5, CSS3 e JavaScript">
-                    <div class="card-content">
-                        <h3>Ocean - Sistema de Gestão</h3>
-                        <p>Ocean é um sistema de gestão de controle pessoal e profissional. Criado com objetivo de
-                            auxiliar pessoas e empresas na organização de tarefas, metas e finanças. Interface intuitiva
-                            e fácil de usar, com funcionalidades robustas para produtividade.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://ocean-projeto.vercel.app/" class="btn-site" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fas fa-globe"></i> Ver site ao vivo
-                            </a>
-                            <a href="https://github.com/FelipeAlves4/Projeto-Ocean" class="btn-github" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> Ver código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 4: TechLearn -->
-                <div class="card projeto-card">
-                    <img src="img/techlearn.png"
-                        alt="TechLearn - Plataforma de ensino de programação com HTML5, CSS3, JavaScript e Python">
-                    <div class="card-content">
-                        <h3>TechLearn - Plataforma de Ensino</h3>
-                        <p>Plataforma de ensino de programação voltada para iniciantes e estudantes que querem entrar no
-                            universo da tecnologia. O TechLearn foca em uma experiência de aprendizado intuitiva e
-                            gamificada, facilitando o aprendizado de conceitos fundamentais.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Python</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://tech-learn-unimar.vercel.app/" class="btn-site" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fas fa-globe"></i> Ver site ao vivo
-                            </a>
-                            <a href="https://github.com/magat0n/Tech-Learn-UNIMAR.git" class="btn-github"
-                                target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> Ver código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 5: Cyber Security -->
-                <div class="card projeto-card">
-                    <img src="img/cyber.png"
-                        alt="Site Cybersegurança Unimar - Site interativo com terminal JavaScript - HTML5, CSS3, JavaScript">
-                    <div class="card-content">
-                        <h3>Cybersegurança - Unimar</h3>
-                        <p>Site interativo e moderno desenvolvido para apresentar o curso de Cybersegurança da
-                            Universidade de Marília (Unimar). Apresenta conteúdo educacional com terminal totalmente
-                            interativo e experiência de usuário imersiva, engajando visitantes.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://felipealves4.github.io/Cyberseguranca-unimar/" class="btn-site"
-                                target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-globe"></i> Ver site ao vivo
-                            </a>
-                            <a href="https://github.com/FelipeAlves4/Cyberseguranca-unimar.git" class="btn-github"
-                                target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> Ver código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projeto 6: -->
-
-
-                <!-- Projeto 7: Casa de Oração -->
-                <div class="card projeto-card">
-                    <img src="img/igreja.png"
-                        alt="Casa de Oração - Site de apresentação de igreja local em Marília com HTML5, CSS3, JavaScript">
-                    <div class="card-content">
-                        <h3>Casa de Oração</h3>
-                        <p>Casa de Oração é uma igreja local que busca conectar pessoas e compartilhar mensagens de fé,
-                            amor e esperança. O site foi criado para melhorar a presença online da igreja, permitindo
-                            que mais pessoas conheçam seu trabalho e se sintam convidadas a participar.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://casa-de-ora-o.vercel.app/" class="btn-site" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fas fa-globe"></i> Ver site ao vivo
-                            </a>
-                            <a href="https://github.com/FelipeAlves4/casa-de-ora-o" class="btn-github" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> Ver código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+        <section id="contato" aria-labelledby="contato-title">
+            <div class="section-heading">
+                <span class="section-kicker">Próximo passo</span>
+                <h2 id="contato-title">Vamos conversar sobre o seu projeto?</h2>
+                <p>Explique o que sua empresa precisa melhorar: presença digital, captação de clientes, organização de
+                    processos ou uma solução específica.</p>
             </div>
-        </section>
 
-        <section id="contato">
-            <h2>Contato e Redes Sociais</h2>
             <div class="contato-container">
-                <p class="contato-intro">Quer conversar sobre um projeto? Estou disponível para discussões sobre
-                    desenvolvimento web, criação de sites e soluções digitais para sua empresa.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/dev.felipinho/" target="_blank" rel="noopener noreferrer"
-                        title="Instagram de Felipe Alves">
-                        <i class="fab fa-instagram"></i>
+                <p class="contato-intro">Atendo empresas, prestadores de serviço, vendedores, corretores e profissionais
+                    liberais que precisam de soluções digitais objetivas e bem apresentadas.</p>
+
+                <a href="https://wa.me/5514996954298?text=Ol%C3%A1%2C%20Felipe!%20Quero%20falar%20sobre%20um%20projeto%20digital%20para%20minha%20empresa."
+                    target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar sobre meu projeto
+                </a>
+
+                <div class="contact-actions" aria-label="Outros links profissionais">
+                    <a href="Curriculo_Felipe.pdf" download>
+                        <i class="fas fa-file-arrow-down"></i>
+                        Baixar currículo
                     </a>
                     <a href="https://github.com/FelipeAlves4" target="_blank" rel="noopener noreferrer"
                         title="GitHub de Felipe Alves">
                         <i class="fab fa-github"></i>
+                        GitHub
                     </a>
                     <a href="https://www.linkedin.com/in/felipealves-py" target="_blank" rel="noopener noreferrer"
                         title="LinkedIn de Felipe Alves">
                         <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.instagram.com/dev.felipinho/" target="_blank" rel="noopener noreferrer"
+                        title="Instagram de Felipe Alves">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
                     </a>
                 </div>
-                <a href="https://wa.me/14996954298" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-                    <i class="fab fa-whatsapp"></i>
-                    Fale comigo no WhatsApp
-                </a>
             </div>
         </section>
     </main>
 
-    <button class="back-to-top" title="Voltar ao topo">
+    <button class="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
     </button>
 

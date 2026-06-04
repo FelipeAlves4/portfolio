@@ -1,50 +1,54 @@
-# Portfólio | Felipe Alves
+# Portfólio Comercial | Felipe Alves
 
-Bem-vindo ao meu portfólio! Este projeto apresenta meus principais trabalhos, habilidades e formas de contato, com um layout moderno, responsivo e dinâmico.
+Site pessoal de Felipe Alves, desenvolvedor full stack júnior em Marília/SP, reposicionado para apresentar serviços digitais para empresas, prestadores de serviço e pequenos negócios.
 
-## ✨ Sobre o Projeto
-Este portfólio foi desenvolvido para apresentar minhas experiências como desenvolvedor Full Stack, destacando projetos, habilidades técnicas e formas de contato. O design é inspirado em tendências modernas, com animações, efeitos visuais e foco na usabilidade.
+## Sobre o Projeto
 
-## 🚀 Tecnologias Utilizadas
+O portfólio comunica a oferta de criação de sites institucionais, landing pages, sistemas web personalizados, dashboards e automações simples para empresas que querem fortalecer a presença digital, captar contatos e organizar processos.
+
+## Tecnologias Utilizadas
+
 - HTML5
-- CSS3 (com animações e responsividade)
+- CSS3
 - JavaScript
-- [Font Awesome](https://fontawesome.com/) (ícones)
-- Google Fonts (Roboto)
+- Font Awesome
+- Google Fonts
 
-## 📸 Layout
-O layout é totalmente responsivo, com destaque para:
-- Seção inicial com apresentação e foto
-- Cards de projetos dinâmicos e animados
-- Habilidades separadas por categoria
-- Links para redes sociais e WhatsApp
+## Estrutura
 
-## 🖥️ Como Rodar o Projeto
-1. Clone este repositório:
+- Primeira dobra com proposta comercial e CTA para WhatsApp
+- Seção de serviços digitais
+- Projetos apresentados como mini estudos de caso
+- Processo de trabalho em quatro etapas
+- Sobre, stack técnica e contato
+
+## Como Rodar
+
+1. Clone o repositório:
    ```bash
    git clone https://github.com/FelipeAlves4/portfolio.git
    ```
+
 2. Acesse a pasta do projeto:
    ```bash
    cd portfolio
    ```
-3. Abra o arquivo `index.html` no seu navegador preferido.
 
-> Não é necessário nenhum backend ou instalação de dependências para rodar o portfólio.
+3. Abra o arquivo `index.html` no navegador.
 
-## 📝 Personalização
-- **Foto de perfil:** Substitua o arquivo `img/eu.jpg` pela sua foto.
-- **Currículo:** Coloque seu arquivo `cv.pdf` na raiz do projeto para ativar o botão de download.
-- **Projetos:** Edite a seção de projetos no `index.html` para adicionar, remover ou modificar seus projetos.
-- **Cores e estilos:** Personalize o arquivo `style.css` conforme sua identidade visual.
+Não é necessário backend ou instalação de dependências para visualizar o site.
 
-## 📬 Contato
-- [Instagram](https://www.instagram.com/felipe_alvesrodri/)
+## Personalização
+
+- Atualize textos comerciais diretamente no `index.html`.
+- Ajuste cores, espaçamentos e responsividade no `style.css`.
+- Edite interações de menu, scroll e animações no `script.js`.
+- Substitua imagens na pasta `img` mantendo os nomes usados no HTML ou atualizando os caminhos.
+- Mantenha o arquivo `Curriculo_Felipe.pdf` na raiz para o botão de currículo funcionar.
+
+## Contato
+
+- [Instagram](https://www.instagram.com/dev.felipinho/)
 - [GitHub](https://github.com/FelipeAlves4)
 - [LinkedIn](https://www.linkedin.com/in/felipealves-py)
-- [WhatsApp](https://wa.me/14996759167)
-
----
-
-Feito com �� por Felipe Alves
-
+- [WhatsApp](https://wa.me/5514996954298)
