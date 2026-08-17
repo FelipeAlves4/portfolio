@@ -1,0 +1,5 @@
+---
+import type { Component } from 'astro/types';
+const { number, title, description, icon: Icon } = Astro.props as { number: string; title: string; description: string; icon: Component };
+---
+<article class="process-step reveal"><span>{number}</span><Icon size={22} strokeWidth={1.7} /><h3>{title}</h3><p>{description}</p></article>

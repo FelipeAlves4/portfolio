@@ -1,0 +1,5 @@
+---
+import TechGroup from '../components/TechGroup.astro';
+import { stack } from '../data/stack';
+---
+<section class="section stack-section"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Base técnica</p><h2>Tecnologia a serviço da solução</h2><p>Ferramentas escolhidas conforme o projeto precisa, com foco em manutenção e resultado.</p></div><div class="stack-grid">{stack.map((group) => <TechGroup group={group} />)}</div></div></section>

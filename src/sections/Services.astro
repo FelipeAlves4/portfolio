@@ -1,0 +1,5 @@
+---
+import ServiceCard from '../components/ServiceCard.astro';
+import { services } from '../data/services';
+---
+<section id="servicos" class="section section-tint"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Soluções digitais</p><h2>Como posso ajudar seu negócio</h2><p>Do primeiro contato à publicação, cada projeto é pensado para ser claro, útil e alinhado ao seu objetivo.</p></div><div class="services-grid">{services.map((service) => <ServiceCard service={service} />)}</div></div></section>

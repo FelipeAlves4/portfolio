@@ -1,0 +1,24 @@
+---
+import { Menu, X } from 'lucide-astro';
+
+const navItems = [
+  ['Início', '#inicio'], ['Serviços', '#servicos'], ['Projetos', '#projetos'],
+  ['Como funciona', '#processo'], ['Sobre', '#sobre'], ['Contato', '#contato'],
+];
+const whatsapp = 'https://wa.me/5514996954298?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.';
+---
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="#inicio" aria-label="Felipe Alves — início">FA<span>.</span></a>
+    <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav" data-menu-button>
+      <Menu size={22} aria-hidden="true" data-menu-icon />
+      <X size={22} aria-hidden="true" data-close-icon hidden />
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Navegação principal" data-nav>
+      <ul>
+        {navItems.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+      </ul>
+      <a class="button button-small" href={whatsapp} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,11 @@
+---
+import { Handshake, LayoutPanelTop, MessageSquareText, Rocket, Wrench } from 'lucide-astro';
+const points = [
+  ['Comunicação clara', 'Você acompanha o projeto sem precisar entender termos técnicos.', MessageSquareText],
+  ['Responsividade', 'Experiência preparada para celular, tablet e desktop.', LayoutPanelTop],
+  ['Foco no negócio', 'O visual e as funcionalidades são construídos para o objetivo da empresa.', Handshake],
+  ['Projeto até a publicação', 'Acompanho desenvolvimento, ajustes e deploy.', Rocket],
+  ['Tecnologia adequada', 'Escolho ferramentas conforme o problema, sem complexidade desnecessária.', Wrench],
+];
+---
+<section class="section why-section"><div class="container two-column"><div class="section-heading section-heading-left reveal"><p class="eyebrow">Uma parceria objetiva</p><h2>Por que trabalhar comigo</h2><p>Uma experiência de desenvolvimento com linguagem direta, visão de negócio e atenção aos detalhes.</p></div><div class="why-list">{points.map(([title, description, Icon]) => <article class="why-item reveal"><Icon size={21} /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></div></section>
