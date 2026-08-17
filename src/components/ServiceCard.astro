@@ -1,0 +1,9 @@
+---
+import type { Service } from '../data/services';
+const { service } = Astro.props as { service: Service };
+const Icon = service.icon;
+---
+<article class="service-card reveal">
+  <span class="icon-box"><Icon size={22} strokeWidth={1.8} /></span>
+  <h3>{service.title}</h3><p>{service.description}</p>
+</article>

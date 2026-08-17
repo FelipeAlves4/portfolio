@@ -1,0 +1,15 @@
+---
+import { ArrowUpRight, ExternalLink } from 'lucide-astro';
+import type { Project } from '../data/projects';
+const { project, compact = false } = Astro.props as { project: Project; compact?: boolean };
+---
+<article class:list={['project-card', { compact }]}>
+  <a class="project-image" href={`/projetos/${project.slug}`} aria-label={`Ver projeto ${project.name}`}>
+    {project.image ? <img src={project.image} alt={`Prévia do projeto ${project.name}`} width="900" height="480" loading="lazy" decoding="async" /> : <div class:list={['project-placeholder', project.slug]} aria-label={`Prévia conceitual do ${project.name}`}><span>{project.name === 'PsiGestão' ? 'Visão geral' : 'Projeto comercial'}</span><strong>{project.name}</strong><i></i><i></i><i></i></div>}
+  </a>
+  <div class="project-content"><p class="project-category">{project.category}</p><h3>{project.name}</h3><p>{project.shortDescription}</p>
+    {!compact && <div class="chip-list">{project.technologies.slice(0, 4).map((tech) => <span>{tech}</span>)}</div>}
+    <a class="project-link" href={`/projetos/${project.slug}`}>Ver projeto <ArrowUpRight size={17} /></a>
+    {project.website && <a class="sr-only" href={project.website} target="_blank" rel="noopener noreferrer"><ExternalLink /> Abrir site de {project.name}</a>}
+  </div>
+</article>

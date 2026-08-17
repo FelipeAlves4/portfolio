@@ -1,0 +1,11 @@
+---
+import { ClipboardList, Code2, MessageCircleMore, Rocket } from 'lucide-astro';
+import ProcessStep from '../components/ProcessStep.astro';
+const steps = [
+  ['01', 'Conversa', 'Entendo o negócio e objetivo do projeto.', MessageCircleMore],
+  ['02', 'Planejamento', 'Definimos estrutura, funcionalidades, conteúdo e prazo.', ClipboardList],
+  ['03', 'Desenvolvimento', 'Construção da solução com acompanhamento.', Code2],
+  ['04', 'Entrega', 'Testes, ajustes, publicação e orientação.', Rocket],
+];
+---
+<section id="processo" class="section section-tint"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Processo simples</p><h2>Como funciona</h2></div><div class="process-grid">{steps.map(([number, title, description, icon]) => <ProcessStep number={number} title={title} description={description} icon={icon} />)}</div></div></section>

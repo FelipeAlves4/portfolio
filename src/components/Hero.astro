@@ -1,0 +1,27 @@
+---
+import { ArrowDownRight, FileText, Github, Linkedin, MessageCircle } from 'lucide-astro';
+const whatsapp = 'https://wa.me/5514996954298?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.';
+---
+<section id="inicio" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Desenvolvedor Full Stack <span>•</span> Marília/SP</p>
+      <h1>Transformo ideias em <em>sites, sistemas</em> e produtos digitais.</h1>
+      <p class="hero-description">Desenvolvo soluções digitais para empresas e profissionais que querem vender mais, organizar processos e fortalecer sua presença online.</p>
+      <ul class="tag-list" aria-label="Áreas de atuação"><li>Sites</li><li>Landing Pages</li><li>Sistemas</li><li>Automação</li></ul>
+      <div class="hero-actions">
+        <a class="button" href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> Solicitar orçamento</a>
+        <a class="text-link" href="#projetos">Ver projetos <ArrowDownRight size={18} /></a>
+      </div>
+      <nav class="social-links" aria-label="Perfis profissionais">
+        <a href="https://github.com/FelipeAlves4" target="_blank" rel="noopener noreferrer"><Github size={17} /> GitHub</a>
+        <a href="https://www.linkedin.com/in/felipealves-py" target="_blank" rel="noopener noreferrer"><Linkedin size={17} /> LinkedIn</a>
+        <a href="/Curriculo_Felipe.pdf" target="_blank" rel="noopener noreferrer"><FileText size={17} /> Currículo</a>
+      </nav>
+    </div>
+    <div class="hero-visual reveal" style="--delay: 120ms">
+      <div class="profile-frame"><img src="/images/profile/Felipinho.png" alt="Felipe Alves, desenvolvedor full stack" width="960" height="1280" fetchpriority="high" /></div>
+      <aside class="availability-card"><span class="status-dot"></span><div><strong>Projetos sob medida</strong><small>Do planejamento à publicação</small></div></aside>
+    </div>
+  </div>
+</section>

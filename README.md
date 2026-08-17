@@ -1,54 +1,18 @@
-# Portfólio Comercial | Felipe Alves
+# Portfólio V3 — Felipe Alves
 
-Site pessoal de Felipe Alves, desenvolvedor full stack júnior em Marília/SP, reposicionado para apresentar serviços digitais para empresas, prestadores de serviço e pequenos negócios.
+Portfólio comercial construído com Astro, TypeScript e Tailwind CSS, com foco em projetos freelance de sites, landing pages, sistemas e automações.
 
-## Sobre o Projeto
+## Desenvolvimento
 
-O portfólio comunica a oferta de criação de sites institucionais, landing pages, sistemas web personalizados, dashboards e automações simples para empresas que querem fortalecer a presença digital, captar contatos e organizar processos.
+```bash
+npm install
+npm run dev
+```
 
-## Tecnologias Utilizadas
+## Scripts
 
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome
-- Google Fonts
+- `npm run dev` — inicia o servidor local.
+- `npm run build` — gera a versão estática para produção.
+- `npm run preview` — visualiza o build localmente.
 
-## Estrutura
-
-- Primeira dobra com proposta comercial e CTA para WhatsApp
-- Seção de serviços digitais
-- Projetos apresentados como mini estudos de caso
-- Processo de trabalho em quatro etapas
-- Sobre, stack técnica e contato
-
-## Como Rodar
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/FelipeAlves4/portfolio.git
-   ```
-
-2. Acesse a pasta do projeto:
-   ```bash
-   cd portfolio
-   ```
-
-3. Abra o arquivo `index.html` no navegador.
-
-Não é necessário backend ou instalação de dependências para visualizar o site.
-
-## Personalização
-
-- Atualize textos comerciais diretamente no `index.html`.
-- Ajuste cores, espaçamentos e responsividade no `style.css`.
-- Edite interações de menu, scroll e animações no `script.js`.
-- Substitua imagens na pasta `img` mantendo os nomes usados no HTML ou atualizando os caminhos.
-- Mantenha o arquivo `Curriculo_Felipe.pdf` na raiz para o botão de currículo funcionar.
-
-## Contato
-
-- [Instagram](https://www.instagram.com/dev.felipinho/)
-- [GitHub](https://github.com/FelipeAlves4)
-- [LinkedIn](https://www.linkedin.com/in/felipealves-py)
-- [WhatsApp](https://wa.me/5514996954298)
+Os projetos são centralizados em `src/data/projects.ts`; as páginas individuais são geradas estaticamente em `src/pages/projetos/[slug].astro`.

@@ -1,0 +1,5 @@
+---
+import type { TechnologyGroup } from '../data/stack';
+const { group } = Astro.props as { group: TechnologyGroup };
+---
+<article class="tech-group reveal"><h3>{group.title}</h3><ul>{group.technologies.map((tech) => <li>{tech}</li>)}</ul></article>

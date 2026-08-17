@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-felipealves.vercel.app/sitemap-index.xml
