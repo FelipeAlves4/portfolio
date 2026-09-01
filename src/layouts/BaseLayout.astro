@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/animations.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -9,4 +10,35 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const imageUrl = new URL(image, Astro.site);
 const personSchema = { '@context': 'https://schema.org', '@type': 'Person', name: 'Felipe Alves', jobTitle: 'Desenvolvedor Full Stack', url: Astro.site?.toString(), image: imageUrl.toString(), sameAs: ['https://github.com/FelipeAlves4', 'https://www.linkedin.com/in/felipealves-py', 'https://www.instagram.com/dev.felipinho/'], address: { '@type': 'PostalAddress', addressLocality: 'Marília', addressRegion: 'SP', addressCountry: 'BR' } };
 ---
-<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#1A1B26" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" /><title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={canonical} />{noindex && <meta name="robots" content="noindex, nofollow" />}<meta property="og:type" content="website" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:image" content={imageUrl} /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={imageUrl} /><script type="application/ld+json" set:html={JSON.stringify(personSchema)} /></head><body><Header /><main><slot /></main><Footer /><script src="../scripts/main.ts"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1A1B26" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  </head>
+  <body>
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+    <Header />
+    <main><slot /></main>
+    <Footer />
+    <script src="../scripts/main.ts"></script>
+  </body>
+</html>
