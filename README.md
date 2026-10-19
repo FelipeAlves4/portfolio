@@ -22,7 +22,7 @@ npm run preview
 
 ## Fotos e privacidade
 
-Os retratos anteriores eram imagens geradas por IA. A V4 **não os exibe**. Ao disponibilizar uma foto real aprovada pelo Felipe, é possível recolocá-la no Hero ou Sobre mim. Até lá, a apresentação visual utiliza somente capturas de projetos.
+Os retratos anteriores eram imagens geradas por IA. A V4 **não exibe retratos gerados por IA**. A seção Sobre agora utiliza a segunda foto real fornecida pelo Felipe, recortada e ajustada discretamente, sem modificar sua aparência. A versão compacta e otimizada para web está em `public/images/profile/felipe-real.webp`. Até lá, a apresentação visual utiliza somente capturas de projetos.
 
 Os arquivos antigos não foram apagados para evitar perda irreversível de material; podem ser removidos após aprovação das novas fotos.
 
@@ -33,6 +33,8 @@ As informações e links de contato deste domínio independente **não devem ser
 ## Cuidados de conteúdo
 
 Não declarar vendas, aumento percentual de receita, métricas de performance ou clientes sem comprovação. Atualizar o campo `evidence` de cada case somente com resultados verificáveis.
+
+**Foto selecionada:** segunda foto real enviada por Felipe, com fundo neutro e camiseta preta. A versão WebP é exibida na seção Sobre mim.
 
 ## Antes de publicar
 

@@ -1,24 +1,31 @@
 ---
-import { GraduationCap, Layers3, MapPin } from 'lucide-astro';
+import { ArrowUpRight, BookOpenText, GraduationCap, MapPin } from 'lucide-astro';
 ---
 <section id="sobre" class="section about-section">
   <div class="container about-grid about-grid-v4">
-    <div class="about-identity reveal">
-      <span class="about-monogram" aria-hidden="true">FA<span>.</span></span>
-      <span class="about-identity-label">Felipe Alves <small>Desenvolvedor Full Stack</small></span>
-      <div class="about-facts">
-        <div><GraduationCap size={19} /><span>Técnico em Desenvolvimento de Sistemas</span></div>
-        <div><Layers3 size={19} /><span>Bacharelado em Inteligência Artificial — UNIMAR (em curso)</span></div>
-        <div><MapPin size={19} /><span>Marília, São Paulo • Atendimento remoto</span></div>
+    <figure class="about-portrait-panel reveal">
+      <div class="about-portrait-image">
+        <img src="/images/profile/felipe-real.webp"
+          alt="Foto real de Felipe Alves, desenvolvedor Full Stack, usando óculos e camiseta preta"
+          width="440" height="550" loading="lazy" decoding="async" />
+        <span class="about-portrait-label">
+          <strong>Felipe Alves</strong>
+          <small>Desenvolvedor Full Stack</small>
+        </span>
       </div>
-    </div>
-    <div class="about-copy reveal" style="--delay: 80ms">
+      <figcaption class="about-portrait-details">
+        <span><GraduationCap size={17} aria-hidden="true" /> Técnico em Desenvolvimento de Sistemas</span>
+        <span><BookOpenText size={17} aria-hidden="true" /> Inteligência Artificial na UNIMAR (em curso)</span>
+        <span><MapPin size={17} aria-hidden="true" /> Marília, SP • Atendimento remoto</span>
+      </figcaption>
+    </figure>
+    <div class="about-copy about-copy-v4 reveal" style="--delay: 80ms">
       <p class="eyebrow">Quem vai desenvolver sua solução</p>
       <h2>Prazer, sou Felipe.</h2>
-      <p>Sou desenvolvedor Full Stack, com formação técnica em Desenvolvimento de Sistemas e atualmente curso Bacharelado em Inteligência Artificial na UNIMAR.</p>
-      <p>Gosto de entender o que acontece por trás de uma necessidade: como a empresa trabalha, onde está a dificuldade e o que uma solução digital realmente precisa fazer.</p>
-      <p>Trabalho com frontend, backend, bancos de dados e publicação de aplicações. Nos cases acima, você pode conhecer alguns projetos e observar as decisões tomadas em cada um.</p>
-      <a class="text-link" href="#contato">Vamos conversar sobre seu projeto <span aria-hidden="true">↗</span></a>
+      <p>Sou desenvolvedor Full Stack, formado no curso técnico de Desenvolvimento de Sistemas e atualmente estudante de Inteligência Artificial na UNIMAR.</p>
+      <p>Gosto de entender a necessidade por trás de cada projeto: o que precisa melhorar, quem vai utilizar a solução e como a tecnologia pode facilitar o trabalho.</p>
+      <p>Meu objetivo é entregar sites e sistemas bem estruturados, funcionais e alinhados ao seu negócio, com comunicação clara em cada etapa.</p>
+      <a class="about-conversation-link" href="#contato">Vamos conversar sobre seu projeto <ArrowUpRight size={18} aria-hidden="true" /></a>
     </div>
   </div>
 </section>

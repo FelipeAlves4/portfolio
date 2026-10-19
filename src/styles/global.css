@@ -1381,3 +1381,110 @@ section[id], div[id^="projetos-"] { scroll-margin-top: 6rem; }
   .solution-path { transition: none; }
   .solution-path:hover { transform: none; }
 }
+
+/* V4 — Foto real na seção Sobre mim */
+.about-grid-v4 {
+  grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr);
+  align-items: center;
+  gap: clamp(2rem, 5.3vw, 5rem);
+}
+.about-portrait-panel {
+  margin: 0;
+  border: 1px solid rgba(249,199,132,.22);
+  border-radius: 1.45rem;
+  overflow: hidden;
+  background: #25293b;
+  box-shadow: 0 20px 60px rgba(0,0,0,.18);
+}
+.about-portrait-image {
+  position: relative;
+  overflow: hidden;
+  background: #6e6d70;
+  aspect-ratio: 440 / 485;
+}
+.about-portrait-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.about-portrait-image::after {
+  content: "";
+  position: absolute;
+  inset: 52% 0 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(16,17,27,.92));
+}
+.about-portrait-label {
+  position: absolute;
+  z-index: 1;
+  bottom: 1.15rem;
+  left: 1.3rem;
+  right: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.about-portrait-label strong {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.about-portrait-label small {
+  color: #dedde8;
+  font-size: .83rem;
+}
+.about-portrait-details {
+  padding: 1.15rem 1.25rem;
+  display: grid;
+  gap: .73rem;
+  border-top: 1px solid rgba(249,199,132,.17);
+}
+.about-portrait-details span {
+  display: flex;
+  align-items: flex-start;
+  gap: .62rem;
+  color: #e2e2e9;
+  font-size: .82rem;
+  line-height: 1.45;
+}
+.about-portrait-details svg {
+  color: var(--cream);
+  margin-top: .05rem;
+  flex: 0 0 auto;
+}
+.about-copy-v4 { align-self: center; }
+.about-copy-v4 h2 {
+  font-size: clamp(2.25rem, 4vw, 3.8rem);
+  letter-spacing: -.045em;
+  margin-bottom: 1.3rem;
+}
+.about-copy-v4 p:not(.eyebrow) {
+  font-size: .99rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.about-conversation-link {
+  margin-top: .65rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--cream);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(249,199,132,.34);
+  padding-bottom: .45rem;
+}
+.about-conversation-link:hover { color: white; border-bottom-color: white; }
+@media (max-width: 720px) {
+  .about-grid-v4 { grid-template-columns: 1fr; gap: 2.2rem; }
+  .about-portrait-panel { max-width: 490px; width: 100%; margin-inline: auto; }
+  .about-portrait-image { aspect-ratio: 440 / 415; }
+  .about-copy-v4 { align-self: stretch; }
+  .about-copy-v4 h2 { font-size: 2.45rem; }
+}
+@media (max-width: 410px) {
+  .about-portrait-image { aspect-ratio: 1 / 1.06; }
+  .about-portrait-details { padding: 1rem; }
+}
