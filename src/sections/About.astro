@@ -1,3 +1,24 @@
 ---
+import { GraduationCap, Layers3, MapPin } from 'lucide-astro';
 ---
-<section id="sobre" class="section about-section"><div class="container about-grid"><div class="about-image reveal"><img src="/images/profile/felps.png" alt="Felipe Alves" width="1024" height="1536" loading="lazy" decoding="async" /></div><div class="about-copy reveal" style="--delay: 80ms"><p class="eyebrow">Sobre mim</p><h2>Desenvolvedor Full Stack com foco em problemas reais.</h2><p>Sou Felipe Alves, Técnico em Desenvolvimento de Sistemas e estudante de Bacharelado em Inteligência Artificial na UNIMAR. Atuo com projetos digitais e sistemas para transformar necessidades de negócio em soluções mais claras e funcionais.</p><p>Meu trabalho combina uma apresentação cuidadosa com a tecnologia certa para cada contexto — de uma landing page a um sistema sob medida.</p></div></div></section>
+<section id="sobre" class="section about-section">
+  <div class="container about-grid about-grid-v4">
+    <div class="about-identity reveal">
+      <span class="about-monogram" aria-hidden="true">FA<span>.</span></span>
+      <span class="about-identity-label">Felipe Alves <small>Desenvolvedor Full Stack</small></span>
+      <div class="about-facts">
+        <div><GraduationCap size={19} /><span>Técnico em Desenvolvimento de Sistemas</span></div>
+        <div><Layers3 size={19} /><span>Bacharelado em Inteligência Artificial — UNIMAR (em curso)</span></div>
+        <div><MapPin size={19} /><span>Marília, São Paulo • Atendimento remoto</span></div>
+      </div>
+    </div>
+    <div class="about-copy reveal" style="--delay: 80ms">
+      <p class="eyebrow">Quem vai desenvolver sua solução</p>
+      <h2>Prazer, sou Felipe.</h2>
+      <p>Sou desenvolvedor Full Stack, com formação técnica em Desenvolvimento de Sistemas e atualmente curso Bacharelado em Inteligência Artificial na UNIMAR.</p>
+      <p>Gosto de entender o que acontece por trás de uma necessidade: como a empresa trabalha, onde está a dificuldade e o que uma solução digital realmente precisa fazer.</p>
+      <p>Trabalho com frontend, backend, bancos de dados e publicação de aplicações. Nos cases acima, você pode conhecer alguns projetos e observar as decisões tomadas em cada um.</p>
+      <a class="text-link" href="#contato">Vamos conversar sobre seu projeto <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>

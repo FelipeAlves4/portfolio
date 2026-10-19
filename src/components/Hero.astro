@@ -1,27 +1,36 @@
 ---
-import { ArrowDownRight, FileText, Github, Linkedin, MessageCircle } from 'lucide-astro';
-const whatsapp = 'https://wa.me/5514996954298?text=Ol%C3%A1%20Felipe!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.';
+import { ArrowDownRight, ArrowUpRight, Github, Linkedin, MessageCircle, CheckCircle2 } from 'lucide-astro';
+const whatsapp = 'https://wa.me/5514996954298?text=' + encodeURIComponent('Olá, Felipe! Conheci seu portfólio e gostaria de conversar sobre um projeto.');
 ---
-<section id="inicio" class="hero">
+<section id="inicio" class="hero hero-v4">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
-      <p class="eyebrow">Desenvolvedor Full Stack <span>•</span> Marília/SP</p>
-      <h1>Transformo ideias em <em>sites, sistemas</em> e produtos digitais.</h1>
-      <p class="hero-description">Desenvolvo soluções digitais para empresas e profissionais que querem vender mais, organizar processos e fortalecer sua presença online.</p>
-      <ul class="tag-list" aria-label="Áreas de atuação"><li>Sites</li><li>Landing Pages</li><li>Sistemas</li><li>Automação</li></ul>
+      <p class="eyebrow">Desenvolvimento Full Stack <span>•</span> Marília / SP</p>
+      <h1>Seu negócio precisa de mais do que um <em>site bonito.</em></h1>
+      <p class="hero-lead">Precisa de uma solução que funcione.</p>
+      <p class="hero-description">Desenvolvo sites, sistemas web e automações sob medida para empresas e profissionais que querem organizar processos, atender melhor e crescer com tecnologia.</p>
       <div class="hero-actions">
-        <a class="button" href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> Solicitar orçamento</a>
-        <a class="text-link" href="#projetos">Ver projetos <ArrowDownRight size={18} /></a>
+        <a class="button" href={whatsapp} target="_blank" rel="noopener noreferrer" data-cta="hero-orcamento"><MessageCircle size={18} /> Conversar sobre meu projeto <ArrowUpRight size={17} /></a>
+        <a class="text-link" href="#projetos">Conhecer os projetos <ArrowDownRight size={18} /></a>
       </div>
+      <div class="hero-assurance"><CheckCircle2 size={17} /><span>Do planejamento ao desenvolvimento e à publicação.</span></div>
       <nav class="social-links" aria-label="Perfis profissionais">
         <a href="https://github.com/FelipeAlves4" target="_blank" rel="noopener noreferrer"><Github size={17} /> GitHub</a>
         <a href="https://www.linkedin.com/in/felipealves-py" target="_blank" rel="noopener noreferrer"><Linkedin size={17} /> LinkedIn</a>
-        <a href="/Curriculo_Felipe.pdf" target="_blank" rel="noopener noreferrer"><FileText size={17} /> Currículo</a>
       </nav>
     </div>
     <div class="hero-visual reveal" style="--delay: 120ms">
-      <div class="profile-frame"><img src="/images/profile/Felipinho.png" alt="Felipe Alves, desenvolvedor full stack" width="960" height="1280" fetchpriority="high" /></div>
-      <aside class="availability-card"><span class="status-dot"></span><div><strong>Projetos sob medida</strong><small>Do planejamento à publicação</small></div></aside>
+      <div class="work-showcase">
+        <div class="work-showcase-heading"><span class="work-showcase-indicator"></span><span>Projetos em destaque</span><span class="work-showcase-label">PORTFÓLIO</span></div>
+        <a class="work-showcase-main" href="/projetos/psigestao" aria-label="Conhecer o projeto PsiGestão">
+          <img src="/images/projects/psigestao.png" alt="Tela do projeto PsiGestão, plataforma de gestão para psicólogos" width="900" height="540" fetchpriority="high" decoding="async" />
+          <span class="work-showcase-caption"><small>Sistema web • Em desenvolvimento</small><strong>PsiGestão <ArrowUpRight size={18} /></strong></span>
+        </a>
+        <a class="work-showcase-secondary" href="/projetos/cafe-caramello" aria-label="Conhecer o projeto Café Caramello">
+          <img src="/images/projects/cafe-caramello.png" alt="Tela do site Café Caramello" width="280" height="175" loading="lazy" decoding="async" />
+          <span><small>Site comercial</small><strong>Café Caramello</strong><span class="showcase-action">Ver case <ArrowUpRight size={14} /></span></span>
+        </a>
+      </div>
     </div>
   </div>
 </section>

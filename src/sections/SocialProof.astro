@@ -1,0 +1,19 @@
+---
+import { ArrowUpRight, Quote, Star } from 'lucide-astro';
+const profile = 'https://www.99freelas.com.br/user/Felipe-alves4';
+---
+<section class="social-proof-section" aria-labelledby="social-proof-title">
+  <div class="container social-proof-grid">
+    <div class="social-proof-heading">
+      <p class="eyebrow">Confiança com transparência</p>
+      <h2 id="social-proof-title">Qualidade que você pode conferir.</h2>
+      <p>Veja projetos demonstráveis e o feedback público de um trabalho já concluído.</p>
+    </div>
+    <figure class="review-panel">
+      <div class="review-rating"><span aria-label="Cinco de cinco estrelas"><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /></span><strong>5,0 / 5</strong><small>1 avaliação pública</small></div>
+      <blockquote><Quote size={23} aria-hidden="true" /> “Trabalho excelente muito rápido, só posso recomendar”</blockquote>
+      <figcaption>Avaliação recebida por um projeto de planilha concluído no 99Freelas, em agosto de 2026.</figcaption>
+      <a class="text-link" href={profile} target="_blank" rel="noopener noreferrer">Conferir avaliação no 99Freelas <ArrowUpRight size={16} /></a>
+    </figure>
+  </div>
+</section>

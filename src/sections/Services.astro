@@ -1,5 +1,29 @@
 ---
-import ServiceCard from '../components/ServiceCard.astro';
-import { services } from '../data/services';
+import { ArrowUpRight, Code2, Globe2, Workflow, Check } from 'lucide-astro';
 ---
-<section id="servicos" class="section section-tint"><div class="container"><div class="section-heading reveal"><p class="eyebrow">Soluções digitais</p><h2>Como posso ajudar seu negócio</h2><p>Do primeiro contato à publicação, cada projeto é pensado para ser claro, útil e alinhado ao seu objetivo.</p></div><div class="services-grid">{services.map((service) => <ServiceCard service={service} />)}</div></div></section>
+<section id="servicos" class="section solutions-section section-tint">
+  <div class="container">
+    <div class="section-heading section-heading-left reveal">
+      <p class="eyebrow">Soluções para o seu negócio</p>
+      <h2>Qual problema você precisa resolver?</h2>
+      <p>Escolha o tipo de projeto mais próximo do que você procura. Cada solução começa com a necessidade do negócio, não com uma tecnologia pronta.</p>
+    </div>
+    <div class="solution-paths">
+      <article class="solution-path solution-path-sites reveal">
+        <div class="solution-topline"><span class="solution-icon"><Globe2 size={25} /></span><span>Presença digital</span></div>
+        <h3>Preciso de um site que represente meu negócio.</h3>
+        <p>Sites institucionais, landing pages e catálogos com informações claras, navegação responsiva e um caminho simples para o contato.</p>
+        <ul><li><Check size={16} /> Sites profissionais</li><li><Check size={16} /> Landing pages</li><li><Check size={16} /> Catálogos e páginas de serviços</li></ul>
+        <a class="solution-link" href="#projetos-sites">Ver projetos de sites <ArrowUpRight size={18} /></a>
+      </article>
+      <article class="solution-path solution-path-systems reveal">
+        <div class="solution-topline"><span class="solution-icon"><Code2 size={25} /></span><span>Operação e processos</span></div>
+        <h3>Preciso de um sistema que resolva algo de verdade.</h3>
+        <p>Sistemas personalizados com login, regras de acesso, banco de dados, painéis e integrações conforme o fluxo do seu negócio.</p>
+        <ul><li><Check size={16} /> Sistemas de gestão</li><li><Check size={16} /> Portais e dashboards</li><li><Check size={16} /> Integrações e automações</li></ul>
+        <a class="solution-link" href="#projetos-sistemas">Ver projetos de sistemas <ArrowUpRight size={18} /></a>
+      </article>
+    </div>
+    <p class="solutions-note"><Workflow size={18} /> Já tem um projeto em andamento? Também posso avaliar melhorias, novas funcionalidades e integrações.</p>
+  </div>
+</section>
