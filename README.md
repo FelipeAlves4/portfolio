@@ -34,6 +34,8 @@ As informações e links de contato deste domínio independente **não devem ser
 
 Não declarar vendas, aumento percentual de receita, métricas de performance ou clientes sem comprovação. Atualizar o campo `evidence` de cada case somente com resultados verificáveis.
 
+**Foto selecionada:** segunda foto real enviada por Felipe, com fundo neutro e camiseta preta. A versão WebP é exibida na seção Sobre mim.
+
 ## Antes de publicar
 
 - Testar `npm ci && npm run build`.
