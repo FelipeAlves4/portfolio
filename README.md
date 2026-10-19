@@ -22,7 +22,7 @@ npm run preview
 
 ## Fotos e privacidade
 
-Os retratos anteriores eram imagens geradas por IA. A V4 **não os exibe**. Ao disponibilizar uma foto real aprovada pelo Felipe, é possível recolocá-la no Hero ou Sobre mim. Até lá, a apresentação visual utiliza somente capturas de projetos.
+Os retratos anteriores eram imagens geradas por IA. A V4 **não os exibe**. A seção Sobre agora destaca a trajetória e a motivação pessoal em vez de exibir um grande monograma genérico. Ao disponibilizar uma foto real aprovada pelo Felipe, é possível substituir o painel narrativo pela fotografia ou combiná-los. Até lá, a apresentação visual utiliza somente capturas de projetos.
 
 Os arquivos antigos não foram apagados para evitar perda irreversível de material; podem ser removidos após aprovação das novas fotos.
 
