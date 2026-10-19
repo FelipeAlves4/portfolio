@@ -1,11 +1,10 @@
 ---
-import { Handshake, LayoutPanelTop, MessageSquareText, Rocket, Wrench } from 'lucide-astro';
+import { ClipboardCheck, MessageSquareText, Rocket, Wrench } from 'lucide-astro';
 const points = [
-  ['Comunicação clara', 'Você acompanha o projeto sem precisar entender termos técnicos.', MessageSquareText],
-  ['Responsividade', 'Experiência preparada para celular, tablet e desktop.', LayoutPanelTop],
-  ['Foco no negócio', 'O visual e as funcionalidades são construídos para o objetivo da empresa.', Handshake],
-  ['Projeto até a publicação', 'Acompanho desenvolvimento, ajustes e deploy.', Rocket],
-  ['Tecnologia adequada', 'Escolho ferramentas conforme o problema, sem complexidade desnecessária.', Wrench],
+  ['Entendimento do problema', 'Antes de escrever código, entendo quem vai usar a solução e qual tarefa ela precisa resolver.', ClipboardCheck],
+  ['Comunicação sem complicação', 'Alinhamos escopo, prioridades e próximos passos com linguagem direta durante o desenvolvimento.', MessageSquareText],
+  ['Entrega do início ao fim', 'Posso desenvolver a interface, as regras de negócio, o banco de dados e a publicação conforme o projeto.', Rocket],
+  ['Tecnologia na medida certa', 'Escolho uma arquitetura compatível com a necessidade, evitando complexidade sem benefício prático.', Wrench],
 ];
 ---
-<section class="section why-section"><div class="container two-column"><div class="section-heading section-heading-left reveal"><p class="eyebrow">Uma parceria objetiva</p><h2>Por que trabalhar comigo</h2><p>Uma experiência de desenvolvimento com linguagem direta, visão de negócio e atenção aos detalhes.</p></div><div class="why-list">{points.map(([title, description, Icon]) => <article class="why-item reveal"><Icon size={21} /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></div></section>
+<section class="section why-section"><div class="container two-column"><div class="section-heading section-heading-left reveal"><p class="eyebrow">Mais do que entregar código</p><h2>Um projeto bem feito começa por entender o seu negócio.</h2><p>Não basta ter uma interface bonita. É preciso transformar o que você precisa em etapas claras e em uma solução que possa ser utilizada.</p></div><div class="why-list">{points.map(([title, description, Icon]) => <article class="why-item reveal"><Icon size={21} /><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></div></section>

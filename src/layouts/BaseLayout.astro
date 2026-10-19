@@ -5,10 +5,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props { title?: string; description?: string; image?: string; noindex?: boolean; }
-const { title = 'Felipe Alves | Desenvolvedor Full Stack e Freelancer', description = 'Desenvolvimento de sites, landing pages, sistemas web e soluções digitais para empresas e profissionais. Conheça os projetos de Felipe Alves.', image = '/images/profile/Felipinho.png', noindex = false } = Astro.props;
+const { title = 'Felipe Alves | Desenvolvedor Full Stack e Freelancer', description = 'Sites profissionais e sistemas web sob medida, do planejamento à publicação. Conheça os projetos de Felipe Alves, desenvolvedor Full Stack.', image = '/images/projects/psigestao.png', noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const imageUrl = new URL(image, Astro.site);
-const personSchema = { '@context': 'https://schema.org', '@type': 'Person', name: 'Felipe Alves', jobTitle: 'Desenvolvedor Full Stack', url: Astro.site?.toString(), image: imageUrl.toString(), sameAs: ['https://github.com/FelipeAlves4', 'https://www.linkedin.com/in/felipealves-py', 'https://www.instagram.com/dev.felipinho/'], address: { '@type': 'PostalAddress', addressLocality: 'Marília', addressRegion: 'SP', addressCountry: 'BR' } };
+const personSchema = { '@context': 'https://schema.org', '@type': 'Person', name: 'Felipe Alves', jobTitle: 'Desenvolvedor Full Stack', url: Astro.site?.toString(), sameAs: ['https://github.com/FelipeAlves4', 'https://www.linkedin.com/in/felipealves-py', 'https://www.instagram.com/dev.felipinho/'], address: { '@type': 'PostalAddress', addressLocality: 'Marília', addressRegion: 'SP', addressCountry: 'BR' } };
 ---
 <!doctype html>
 <html lang="pt-BR">
