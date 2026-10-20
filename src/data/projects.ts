@@ -20,6 +20,32 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'vertice',
+    name: 'VÉRTICE',
+    category: 'E-commerce conceitual',
+    shortDescription: 'Loja de moda masculina com catálogo, busca, favoritos, sacola persistente e checkout demonstrativo.',
+    description: 'Experiência de e-commerce premium criada como projeto conceitual de portfólio. Une direção visual editorial, catálogo navegável, páginas de produtos e uma jornada de compra demonstrativa, sem cobranças reais.',
+    image: '/images/projects/vertice.webp',
+    website: 'https://vertice-eight-omega.vercel.app/',
+    github: 'https://github.com/FelipeAlves4/VERTICE',
+    technologies: ['Next.js', 'React', 'TypeScript', 'CSS', 'Vercel'],
+    featured: true,
+    segment: 'sites',
+    role: 'Desenvolvimento front-end e direção visual',
+    status: 'Demonstração publicada',
+    evidence: 'O projeto pode ser explorado ao vivo: catálogo com oito peças fictícias, filtros, busca, seleção de tamanho, favoritos, sacola salva no navegador e simulação de checkout. Não há pagamentos, estoque real ou resultados comerciais a reivindicar.',
+    problem: 'Mostrar como uma marca de moda pode apresentar produtos com identidade própria e transformar a navegação em uma experiência de compra intuitiva.',
+    solution: 'Loja conceito responsiva com campanha fotográfica gerada por IA, catálogo padronizado, páginas individuais de produto, interações de compra e fluxo demonstrativo completo.',
+    highlights: [
+      'Identidade editorial premium, com fotografias conceituais e interface responsiva',
+      'Catálogo pesquisável, filtros de categoria e ordenação por preço',
+      'Páginas de produto com galeria, detalhes e escolha de tamanho',
+      'Favoritos e sacola persistentes no navegador',
+      'Checkout demonstrativo com resumo do pedido, sem transações reais',
+    ],
+    audience: 'varejo de moda',
+  },
   { slug: 'psigestao', name: 'PsiGestão', category: 'SaaS para psicólogos', shortDescription: 'Gestão de pacientes, agenda, atendimentos, documentos e financeiro.', description: 'Plataforma completa para centralizar a rotina profissional de psicólogos com cuidado especial a informações sensíveis.', image: '/images/projects/psigestao.png', technologies: ['React', 'FastAPI', 'PostgreSQL', 'Supabase', 'Railway', 'Vercel'], featured: true, segment: 'sistemas', role: 'Desenvolvimento Full Stack', evidence: 'A arquitetura reúne frontend, API, banco de dados, autenticação e fluxos clínico-administrativos. A plataforma continua em desenvolvimento; este case demonstra o escopo técnico implementado, não resultados comerciais de uso.', status: 'Produto em desenvolvimento', problem: 'Concentrar a operação clínica em uma experiência segura, organizada e acessível.', solution: 'Uma plataforma unificada para acompanhar pacientes, agenda, registros e a operação financeira.', highlights: ['Gestão de pacientes e agenda', 'Prontuários e documentos', 'Financeiro e portal do paciente', 'Autenticação e controle de acesso'] },
   { slug: 'doria-cucina-italiana', name: 'Doria Cucina Italiana', category: 'Restaurante', shortDescription: 'Landing page para destacar a identidade, o cardápio e o contato de um restaurante italiano.', description: 'Uma presença digital criada para valorizar a experiência do restaurante e tornar o caminho até o contato mais direto.', image: '/images/projects/doria-cucina-italiana.png', website: 'https://doria-cucina-italiana.vercel.app/', github: 'https://github.com/FelipeAlves4/Doria.cucina.italiana', technologies: ['HTML', 'CSS', 'JavaScript'], featured: true, segment: 'sites', role: 'Desenvolvimento da landing page', evidence: 'Demonstra uma apresentação visual voltada ao segmento gastronômico, navegação responsiva e caminhos para consulta das informações e contato. Não foram divulgadas métricas de conversão.', problem: 'Apresentar uma marca gastronômica com personalidade e facilitar o primeiro contato com clientes.', solution: 'Uma landing page visual, responsiva e direcionada para cardápio, marca e contato.', highlights: ['Identidade visual gastronômica', 'Informações do cardápio', 'Experiência responsiva', 'Contato facilitado'], audience: 'restaurante' },
   { slug: 'cafe-caramello', name: 'Café Caramello', category: 'Comercial', shortDescription: 'Site para apresentar produtos, sabores, receitas, revenda e gerar pedidos pelo WhatsApp.', description: 'Projeto comercial para dar visibilidade aos produtos e criar pontos claros de conversão para pedidos.', image: '/images/projects/cafe-caramello.png', website: 'https://cafe-caramelo-marilia.vercel.app/', github: 'https://github.com/FelipeAlves4/Cafe-caramelo-marilia', technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'], featured: true, segment: 'sites', role: 'Desenvolvimento do site comercial', evidence: 'O site permite conhecer o catálogo, explorar conteúdos e seguir para pedidos ou contato. É uma demonstração de experiência comercial, sem alegar resultados de vendas.', problem: 'Reunir o catálogo e as possibilidades de compra em uma presença digital clara.', solution: 'Uma experiência comercial voltada a produtos, revenda, receitas e pedidos via WhatsApp.', highlights: ['Apresentação de produtos', 'Receitas e revenda', 'CTAs para pedidos', 'Layout responsivo'] },

@@ -1,11 +1,12 @@
 ---
 import { ArrowUpRight, ExternalLink } from 'lucide-astro';
 import type { Project } from '../data/projects';
+import VerticePreview from './VerticePreview.astro';
 const { project, compact = false } = Astro.props as { project: Project; compact?: boolean };
 ---
 <article class:list={['project-card', { compact }]}>
   <a class="project-image" href={`/projetos/${project.slug}`} aria-label={`Conhecer o case ${project.name}`}>
-    {project.image ? <img src={project.image} alt={`Captura da interface do projeto ${project.name}`} width="900" height="480" loading="lazy" decoding="async" /> : <div class="project-preview-pending"><span>Imagem em preparação</span><strong>{project.name}</strong></div>}
+    {project.slug === 'vertice' ? <VerticePreview /> : project.image ? <img src={project.image} alt={`Captura da interface do projeto ${project.name}`} width="900" height="480" loading="lazy" decoding="async" /> : <div class="project-preview-pending"><span>Imagem em preparação</span><strong>{project.name}</strong></div>}
   </a>
   <div class="project-content">
     <p class="project-category">{project.category}</p>
