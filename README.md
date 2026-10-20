@@ -17,6 +17,7 @@ npm run preview
 - `src/sections/SocialProof.astro`: avaliação pública de **um** serviço concluído no 99Freelas, atribuída ao serviço correto (planilha).
 - `src/sections/Services.astro`: dois caminhos (sites e sistemas).
 - `src/data/projects.ts`: dados, tipo, resultados demonstráveis e links de cada case.
+- `src/components/VerticePreview.astro`: capa editorial da loja conceito VÉRTICE, com fotografia própria copiada do repositório do projeto (não é screenshot da interface).
 - `src/pages/projetos/[slug].astro`: desafio, solução, evidência e tecnologias do projeto.
 - `src/styles/global.css`: base e estilos da V4.
 
@@ -43,3 +44,7 @@ Não declarar vendas, aumento percentual de receita, métricas de performance ou
 - Conferir links ao vivo e textos dos cases.
 - Conferir a versão desktop e mobile.
 - Verificar eventos de clique antes de ativar rastreamento analítico (não há trackers adicionados nesta versão).
+
+## VÉRTICE — projeto adicionado ao portfólio
+
+A VÉRTICE é um e-commerce **conceitual** em Next.js, publicado em https://vertice-eight-omega.vercel.app/. O case em `/projetos/vertice` apresenta as funcionalidades demonstrativas, tecnologias e limites do projeto. Não há vendas, pagamentos ou estoque real. A capa visual utiliza uma das fotografias editoriais geradas por IA para a marca, não uma captura de tela da loja.

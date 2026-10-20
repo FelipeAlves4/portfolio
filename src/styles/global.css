@@ -1488,3 +1488,104 @@ section[id], div[id^="projetos-"] { scroll-margin-top: 6rem; }
   .about-portrait-image { aspect-ratio: 1 / 1.06; }
   .about-portrait-details { padding: 1rem; }
 }
+
+
+/* VÉRTICE — capa editorial exclusiva do projeto, sem simular uma captura de tela. */
+.vertice-project-preview {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  width: 100%;
+  height: 100%;
+  min-height: 210px;
+  background: #24241f;
+  color: #f3eee5;
+}
+.vertice-project-preview::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  z-index: 2;
+  inset: 0;
+  border: 1px solid rgba(255,255,255,.09);
+}
+.vertice-project-preview-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(.55rem, 1.5vw, 1.35rem);
+  padding: clamp(1.1rem, 3.3vw, 3.2rem);
+  background: radial-gradient(circle at 0 0,rgba(177,147,109,.23),transparent 65%),#23241f;
+  min-width: 0;
+  z-index: 1;
+}
+.vertice-preview-label,
+.vertice-preview-foot {
+  color: #d8c8b0;
+  letter-spacing: .18em;
+  font-weight: 700;
+  font-size: clamp(.43rem,.7vw,.68rem);
+}
+.vertice-preview-brand {
+  display: block;
+  color: #f6f2e9;
+  font-size: clamp(1.75rem,4.1vw,4.65rem);
+  font-weight: 850;
+  letter-spacing: -.065em;
+  line-height: 1;
+}
+.vertice-preview-brand span { color: #bd9d73; }
+.vertice-preview-tagline {
+  font-family: Georgia, Cambria, serif;
+  font-size: clamp(1rem,2vw,2rem);
+  font-style: italic;
+  letter-spacing: -.025em;
+  line-height: 1.12;
+  color: #ece5d9;
+}
+.vertice-preview-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  width: 100%;
+  margin-top: auto;
+  opacity: .87;
+}
+.vertice-preview-foot span { font-size: 1.2rem; }
+.project-image .vertice-project-preview img,
+.case-visual .vertice-project-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 28%;
+  transition: transform .55s ease;
+}
+.project-card:hover .vertice-project-preview img { transform: scale(1.035); }
+.case-visual:has(.vertice-project-preview) { background: #24241f; }
+.case-visual .vertice-project-preview { min-height: 100%; }
+.case-visual .vertice-preview-brand { font-size: clamp(2.1rem,6vw,6.6rem); }
+.case-visual .vertice-preview-tagline { font-size: clamp(1.4rem,3.2vw,3rem); }
+.case-editorial-note {
+  color: #b5b5c0;
+  font-size: .88rem;
+  margin: -.15rem 0 1.5rem;
+}
+.work-showcase-secondary[href="/projetos/vertice"] img { object-position: center 24%; }
+@media (max-width:720px) {
+  .vertice-project-preview-copy { padding: 1.1rem; }
+  .vertice-preview-brand { font-size: clamp(1.65rem,7vw,3.5rem); }
+  .vertice-preview-label,.vertice-preview-foot { font-size: .48rem; letter-spacing: .09em; }
+  .vertice-preview-tagline { font-size: clamp(.85rem,3.5vw,1.6rem); }
+  .case-visual .vertice-project-preview { grid-template-columns: 53% 47%; }
+  .case-visual .vertice-preview-brand { font-size: clamp(1.8rem,8vw,3.4rem); }
+  .case-visual .vertice-preview-tagline { font-size: clamp(1rem,4vw,1.6rem); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .project-image .vertice-project-preview img { transition: none; }
+}

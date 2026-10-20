@@ -2,6 +2,7 @@
 import { ArrowLeft, ArrowUpRight, Check, ExternalLink, Github, MessageCircle } from 'lucide-astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { projects, type Project } from '../../data/projects';
+import VerticePreview from '../../components/VerticePreview.astro';
 export function getStaticPaths() { return projects.map((project) => ({ params: { slug: project.slug }, props: { project } })); }
 const { project } = Astro.props as { project: Project };
 const whatsapp = 'https://wa.me/5514996954298?text=' + encodeURIComponent(`Olá, Felipe! Vi o case ${project.name} e gostaria de conversar sobre um projeto semelhante.`);
@@ -17,8 +18,9 @@ const commercialCopy = project.segment === 'sites' ? 'Também precisa de um site
         {project.status && <span class="status-label">{project.status}</span>}
       </header>
       <div class="case-visual">
-        {project.image ? <img src={project.image} alt={`Captura da interface de ${project.name}`} width="1200" height="650" /> : <div class="project-preview-pending case-preview-pending"><span>Captura em preparação</span><strong>{project.name}</strong></div>}
+        {project.slug === 'vertice' ? <VerticePreview /> : project.image ? <img src={project.image} alt={`Captura da interface de ${project.name}`} width="1200" height="650" /> : <div class="project-preview-pending case-preview-pending"><span>Captura em preparação</span><strong>{project.name}</strong></div>}
       </div>
+      {project.slug === 'vertice' && <p class="case-editorial-note">Capa editorial do conceito visual da VÉRTICE. Veja a interface real e teste a loja pelo link abaixo.</p>}
       <div class="case-actions">
         {project.website && <a class="button" href={project.website} target="_blank" rel="noopener noreferrer"><ExternalLink size={18} /> Ver projeto ao vivo</a>}
         {project.github && <a class="button button-ghost" href={project.github} target="_blank" rel="noopener noreferrer"><Github size={18} /> Ver código no GitHub</a>}
